@@ -1,0 +1,1916 @@
+*define
+
+nsa
+
+effect 6,6,1000
+effect 10,10,300
+effect 11,10,200
+effect 12,10,3000
+effect 13,10,1000
+
+clickstr "」）。！？",2
+
+rmenu "セーブ",save,"ロード",load,"最初に戻る",reset
+;rmenu "セーブ",save,"ロード",load,"回想",lookback,"終了する",reset
+;savename "記憶する","記憶を呼び戻す","記憶の断片"
+
+game
+*start
+
+caption "店じまいセール"
+
+setwindow 8,16,23,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
+
+#FFFFFF
+
+
+
+wave "sound\decide10.wav"
+bg "img\logo1.jpg",10
+
+wait 1500
+
+wave "sound\decide11.wav"
+bg "img\logo2.jpg",10
+
+wait 1000
+bg "img\black.bmp",13
+;goto *check
+
+wait 1500
+
+
+
+
+
+bg "img\title1.jpg",11
+wave "sound\bosu28_c.wav"
+wait 600
+bgm "sound\bgml018.mp3"
+
+wait 1000
+bg "img\title2.jpg",12
+
+wait 2000
+mov %9,1
+csel "ゲーム開始",*title_next
+*title_next
+mov %9,0
+stop
+bg "img\black.bmp",10
+
+setwindow 8,16,23,16,26,26,0,2,20,1,1,#cccccc,0,0,639,479
+
+;play "sound\flower.mid"
+bg "img\black.bmp",10
+wait 2000
+
+;■冒頭のシーン
+
+!s60
+;（真っ暗な画面、魅音丸出しのシルエット）
+
+bgm "sound\bgml010.mp3"
+
+「はぁ、はぁ、はぁ・・・」\
+
+bg "img\sitai.jpg",12
+
+;（暗闇にスポットライトが当たっているかのように浮かび上がる
+;カレー鍋を被って床に倒れている知恵先生）
+
+「なんで、こんなことに・・・」\
+
+「あたしは悪くない、悪くない・・・」\
+
+「どうにかこの場を切り抜けなければ・・・」\
+
+;（暗転）
+
+wait 2000
+stop
+bg "img\black.bmp",10
+wait 2000
+
+;■裁判開始
+
+br
+br
+br
+br
+br
+　　１２月ＸＸ日　月曜日　午前１０時００分
+br
+　　　　　　学級裁判所　第１法廷\
+
+
+bg "img\kizuti.jpg",10
+wave "sound\wood05.wav"
+wait 500
+;bg "img\black.bmp",10
+;wait 500
+bgm "sound\tamflash1.mp3"
+bg "img\01.jpg",10
+wait 1000
+
+!s40
+ld c,":a;img\rika-normal.jpg",10
+「これより【被告人・前原圭一】の学級裁判を開廷します。」\
+
+cl a,10
+
+ld r,":a;img\satoko2-horane.jpg",10
+「検察側、準備完了しているのですわ。」\
+
+ld l,":a;img\k2-komari.jpg",10
+「俺はやってない。やってないんだ！」\
+
+bg "img\mado.jpg",10
+
+ld c,":a;img\rena-bikkuri.jpg",10
+「落ち着いて、圭一くん。弁護側準備完了しているんだよ。・・・だよ。」\
+
+bg "img\01.jpg",10
+wait 300
+
+ld c,":a;img\rika-warai.jpg",10
+「では、検察側冒頭陳述をおねがいします」
+\
+
+cl a,10
+
+ld r,":a;img\satoko2-shiryo.jpg",10
+「被告人・前原圭一さんは、知恵先生にぐつぐつに煮立ったカレー鍋を頭からかぶせて殺害しましたのですわ。それを立証してみせますわ。」\
+
+ld r,":a;img\satoko2-normal.jpg",10
+「まずは先週の土曜日、事件当日の状況を時間を遡って説明しますわ。」\
+
+wait 2000
+stop
+wave "sound\eco00.wav"
+bg "img\white.bmp",10
+bgm "sound\bgml003.mp3"
+wait 2000
+
+;■回想シーン：調理室
+
+;（暗転、音楽明るい感じに）
+
+bg "img\chourishitsu.jpg",10
+wait 2000
+
+ld l,":a;img\tie-futuu.jpg",10
+「はい、今日の調理実習はカレーです」\
+
+ld r,":a;img\mion-fukure.jpg",10
+「先生、『今日も』の間違いじゃないんですか？」\
+
+ld l,":a;img\tie-okori.jpg",10
+「いいえ、先週はスパイスをふんだんに使った骨付きチキン入りのインドカレー。」\
+「先々週は出汁の効いたネギ入りの和風カレー丼でしたよ。」\
+「まったく違うものじゃないですか。」\
+「今日は、牛肉・ジャガイモ・ニンジン・タマネギの入った洋風カレーを作りますよ。」\
+
+ld c,":a;img\k-niyari.jpg",10
+「先生にしてはずいぶんオーソドックスな作りのカレーですねぇ。」\
+
+ld l,":a;img\tie-tamaran.jpg",10
+「ふふふ、世の中、シンプルなものほど奥が深いものなのですよ。」\
+「とは言っても一工夫あります。今日は土曜日ですから２晩じっくり寝かせて月曜日に食べます。」\
+
+ld c,":a;img\k-komari.jpg",10
+「えーっ！！今日は調理実習だから昼飯いらないって言ってきちゃったよ。」\
+ld c,":a;img\k-ku.jpg",10
+「今日は親居ないし・・・帰ったら、カップ麺くらいしかないだろーなー。」\
+
+cl r,10
+wait 300
+
+ld r,":a;img\rena-nande2.jpg",10
+「やっぱり豚骨ショウガ味・・・なのかな？・・・かな？」\
+
+wait 2000
+stop
+bg "img\black.bmp",10
+bgm "sound\bgml016.mp3"
+wait 2000
+
+;（暗転）
+
+;■回想シーン：帰り道
+
+bg "img\kaerimiti.jpg",10
+wait 2000
+
+ld l,":a;img\k-niyari.jpg",10
+「先生の凝り性も困ったものだなー。おかげで昼飯食べ損ねちゃったよ。」\
+
+ld c,":a;img\mion-akusho.jpg",10
+「そんなことで大丈夫かい？今日の部活は、興宮（おきのみや）スポーツセンターで興宮タイタンズとの異種球技戦だよ。」\
+
+ld c,":a;img\mion-akusho2.jpg",10
+「向こうが９人で野球で挑んでくるから、こちらは５人でバスケで迎え撃つよ。」\
+
+ld r,":a;img\rika2-warai.jpg",10
+「興宮タイタンズにはいいピッチャーがいるとのことですよ。」\
+
+cl l,10
+wait 300
+
+ld l,":a;img\satoko-akusho.jpg",10
+「相手にとって不足なしですわ。」\
+
+ld c,":a;img\mion-normal.jpg",10
+「調理実習が長引いたから開始時間も迫っているね。このまま直接、興宮スポーツセンターに向かうよ！」\
+
+cl a,10
+wait 300
+
+ld c,":a;img\k-komari.jpg",10
+「あっ、忘れ物した。学校寄ってから行くんで、先に始めていてくれよ。」\
+
+cl a,10
+wait 300
+
+ld c,":a;img\rena-bikkuri.jpg",10
+「えーっ！？５人そろわないとバスケのチーム編成が出来ないんだよ。・・・だよ。」\
+
+ld l,":a;img\k-niyari.jpg",10
+「４人なら、カーリングのチームを組んだらどうだ？最初はカーリングと戦っていたと思ったらいつの間にかバスケになっていたとしたら相手は驚くぞ。」\
+
+ld r,":a;img\rika2-normal.jpg",10
+「圭一、カーリングは玉を使うけど、球技かどうか微妙なのですよ。」\
+ld r,":a;img\rika2-warai.jpg",10
+「玉じゃなくてボールを使うのはないですか？」\
+
+ld l,":a;img\k-warai.jpg",10
+「じゃあ、キンボールはどうだ？」\
+
+cl c,10
+wait 300
+
+ld c,":a;img\satoko-normal.jpg",10
+「キンボールってなんですの？」\
+
+ld l,":a;img\k-niyari.jpg",10
+「知らないのか、沙都子。都会じゃ常識だぞ。」\
+「直径１２２センチ、重さ約１キロという巨大で派手なピンク色をしたボールを、サーブしたりレシーブしたりして、４人１チームで戦う球技だ。」\
+「空気で膨らませたボールを使用しているので、滞空時間が長く、打ち方によっては、ボールを曲げたり落としたりすることもでき、技術も奥深いんだぜ。 」\
+
+ld c,":a;img\satoko-akire.jpg",10
+「また圭一さん、マニアックなものを・・・」\
+
+ld r,":a;img\rika2-nipa.jpg",10
+「口からでまかせのようでいて、本当に実在するあたりが恐ろしいのですよ。」\
+
+cl c,10
+wait 300
+
+ld c,":a;img\mion-normal.jpg",10
+「直径１２２センチか・・・。それだけデカければ圭ちゃんが来るまで持ちこたえられそうだね。」\
+ld c,":a;img\mion-normal2.jpg",10
+「キンボール採用！」\
+
+cl l,10
+wait 300
+
+ld l,":a;img\rena-hau.jpg",10
+「キンボール・・・。はぅ・・・」\
+ld l,":a;img\rena-hau2.jpg",10
+
+wait 2000
+stop
+bg "img\white.bmp",10
+bgm "sound\tamflash1.mp3"
+wait 1000
+
+;（暗転）
+
+
+
+;■裁判に戻る
+
+bg "img\01.jpg",10
+wait 500
+
+ld l,":a;img\k2-komarimae.jpg",10
+ld r,":a;img\satoko2-udegumi.jpg",10
+「・・・と、このように、その日、圭一さんは学校に戻っています。」\
+
+ld r,":a;img\satoko2-shiryo.jpg",10
+「その日、営林署も半ドンでしたので、営林署の人も学校が終わってまもなく帰ったのですが・・・」\
+「そのとき学校に残っていたのは、知恵先生と圭一さんだけだったと証言しています。」\
+
+ld r,":a;img\satoko2-ban.jpg",10
+「その証言を証拠として提出いたしますわ。」\
+
+;（証拠３：営林署員の証言）
+
+bg "img\mado.jpg",10
+wait 300
+
+ld c,":a;img\rena-choiwara.jpg",10
+「圭一くん。証拠は『証拠を確認する』内容を確認できるんだよ。・・・だよ。」
+
+;（見ると、先ほどの証拠のほかに、
+;証拠１：知恵の死亡診断書、
+;証拠２カレー鍋資料（凶器）がある。）
+
+*modoru
+br
+select "証拠を確認する",*shoko,"先に進む",*susumu
+
+*shoko
+
+選択してください
+br
+select "証拠１：知恵の死亡診断書",*sindan,"証拠２：カレー（凶器）",*kyoki,"証拠３：営林署員の証言",*shogen,"戻る",*modoru
+
+*sindan
+知恵の死亡診断書@
+br
+知恵先生は、中身の入ったカレー鍋を被って硬直していた。@
+死亡日時は不明。@
+br
+保健委員　富田大樹\
+
+goto *shoko
+
+*kyoki
+カレー@
+br
+本事件の凶器となったカレー。@
+直径６０ｃｍ深さ３０ｃｍ程度の銅製の鍋に入っていた。@
+状態から、鍋ごと勢い良く被せられたと考えられる。\
+
+goto *shoko
+
+*shogen
+営林署員の証言@
+br
+土曜の放課後、１２時半ごろ、私は帰宅しました。@
+学校には私の他には、知恵先生と前原君だけがいました。@
+２人は、『カレー食べさせてくれよー』、『だめです』といった内容の押し問答をしていました。\
+
+goto *shoko
+
+*susumu
+
+bg "img\01.jpg",10
+wait 300
+
+ld c,":a;img\rika-normal.jpg",10
+「証言によると、『カレー食べさせてくれよー』、『だめです』の押し問答をしていたとのことですが。」\
+
+ld r,":a;img\satoko2-udegumi.jpg",10
+「はい。検察側ではそれが殺害の動機とみているのですわ。」\
+
+ld c,":a;img\rika-nipa.jpg",10
+「食べ物の恨みということですね。では弁護側、反論をどうぞなのですよ。」\
+
+bg "img\mado.jpg",10
+wait 300
+
+ld c,":a;img\rena-komari.jpg",10
+「圭一くん。検察側の立証に何かあやふやな部分はないかな？・・・かな？」\
+「なにか、あったら選んで突きつけて欲しいんだよ。・・・だよ。」\
+
+stop
+
+bgm "sound\bgm0042_SFX.mp3"
+
+*sentakushi
+mov %5,0
+
+br
+知恵の死亡診断書
+br
+カレー
+br
+営林署員の証言
+
+csel "読む",*s1,"突きつける",*s2,
+"読む",*s3,"突きつける",*s4,
+"読む",*s5,"突きつける",*s6
+
+
+*s1
+知恵の死亡診断書@
+br
+知恵先生は、中身の入ったカレー鍋を被って硬直していた。@
+死亡日時は不明。@
+br
+保健委員　富田大樹\
+
+goto *sentakushi
+
+*s2
+
+goto *sentakushi_nuke
+
+*s3
+カレー@
+br
+本事件の凶器となったカレー。@
+直径６０ｃｍ深さ３０ｃｍ程度の銅製の鍋に入っていた。@
+状態から、鍋ごと勢い良く被せられたと考えられる。\
+
+goto *sentakushi
+
+*s4
+ld c,":a;img\rena-nande.jpg",10
+「どうかな？・・・どうかな？」\
+「それが一番、おかしいかな？」\
+「レナにはもっと気になる点があるんだよ。・・・だよ」\
+ld c,":a;img\rena-komari.jpg",10
+
+goto *sentakushi
+
+*s5
+営林署員の証言@
+br
+土曜の放課後、１２時半ごろ、私は帰宅しました。@
+学校には私の他には、知恵先生と前原君だけがいました。@
+２人は、『カレー食べさせてくれよー』、『だめです』といった内容の押し問答をしていました。\
+
+
+goto *sentakushi
+
+*s6
+ld c,":a;img\rena-nande.jpg",10
+「どうかな？・・・どうかな？」\
+「それが一番、おかしいかな？」\
+「レナにはもっと気になる点があるんだよ。・・・だよ」\
+ld c,":a;img\rena-komari.jpg",10
+
+goto *sentakushi
+
+
+*sentakushi_nuke
+
+stop
+
+bgm "sound\fang.mp3"
+
+;（ビシッ！！←突きつける効果音）
+
+ld c,":a;img\rena-warai.jpg",10
+「そうだね。レナもそれがひっかかっていたんだよ。・・・だよ。」\
+
+bg "img\01.jpg",10
+wait 300
+
+ld r,":a;img\satoko2-udegumi.jpg",10
+wait 300
+ld l,":a;img\rena-normal.jpg",10
+「知恵先生の死亡診断書には、死亡推定時刻は不明とあります。」\
+ld l,":a;img\rena-normal2.jpg",10
+「知恵先生はだいたい一番早く学校に来ますから、事件は月曜の朝だったという可能性もあるんじゃないかな？・・・かな？」\
+ld l,":a;img\rena-normal.jpg",10
+「今日の朝、知恵先生が発見された状況を聞かせてほしいかな？・・・かな？」\
+
+ld r,":a;img\satoko2-giku.jpg",10
+「くっ、粘りますわね。裁判長、【第一発見者・園崎魅音】さんの証言に許可をお願いします。」\
+
+cl a,10
+
+ld c,":a;img\rika-nipa.jpg",10
+「証言を許可します。」\
+
+cl a,10 
+
+ld c,":a;img\mion-normal.jpg",10
+
+wait 300
+
+ld r,":a;img\satoko2-shiryo.jpg",10
+「証人さん、名前と職業をお願いしますわ。」\
+
+ld c,":a;img\mion-futeki.jpg",10
+「園崎魅音。このクラスのクラス委員長をしてるよ。」\
+
+cl a,10
+wait 300
+
+ld c,":a;img\rika-nipa.jpg",10
+「では、魅ぃが知恵を発見したときの状況について証言して欲しいのですよ。」\
+
+cl a,10
+
+stop
+bg "img\black.bmp",10
+wait 500
+bg "img\02.jpg",10
+bgm "sound\bgml005.mp3"
+wait 500
+
+;■第一発見者：魅音の証言
+
+ld c,":a;img\mion-normal.jpg",10
+「おじさん、今日は朝早く学校に来てみたんだけど・・・」\
+;①
+
+ld c,":a;img\mion-fukure.jpg",10
+「職員室に知恵先生がいなかったんだよ。」\
+;②
+
+ld c,":a;img\mion-akusho.jpg",10
+「学校内を探してみると、調理実習につかっていた部屋に知恵先生がカレー鍋を被って倒れていたんだよ。」\
+;③
+
+ld c,":a;img\mion-futeki.jpg",10
+「先生は既に死んでいたので、現場をそのままにして人を呼びに行ったってわけさ。」\
+;④
+
+wait 100
+bg "img\01.jpg",10
+wait 100
+
+ld c,":a;img\rika-normal.jpg",10
+「では尋問をどうぞ。」\
+
+
+ld l,":a;img\k2-agoyubi.jpg",10
+（尋問？）\
+
+wait 500
+bg "img\mado.jpg",10
+wait 500
+
+ld c,":a;img\rena-normal.jpg",10
+「圭一くん、尋問っていうのは、証言者に質問をして証言におかしなトコがないかチェックすることだよ。」\
+ld c,":a;img\rena-choiwara2.jpg",10
+「まずは発言に揺さぶりをかけると良いと思うんだよ。・・・だよ。」\
+
+wait 500
+bg "img\02.jpg",10
+wait 500
+
+*mionshogen
+
+;■尋問
+
+ld c,":a;img\mion-normal.jpg",10
+「おじさん、今日は朝早く学校に来てみたんだけど・・・」@
+;①
+
+select "次へ",*next1,"揺さぶる",*igi1
+
+*next1
+
+ld c,":a;img\mion-fukure.jpg",10
+「職員室に知恵先生がいなかったんだよ。」@
+;②
+
+select "次へ",*next2,"揺さぶる",*igi2
+
+*next2
+
+ld c,":a;img\mion-akusho.jpg",10
+「学校内を探してみると、調理実習につかっていた部屋に知恵先生がカレー鍋を被って倒れていたんだよ。」@
+;③
+
+select "次へ",*next3,"揺さぶる",*igi3
+
+*next3
+
+ld c,":a;img\mion-futeki.jpg",10
+「先生は既に死んでいたので、現場をそのままにして人を呼びに行ったってわけさ。」@
+;④
+
+select "次へ",*next4,"揺さぶる",*igi4
+
+*next4
+
+bg "img\black.bmp",10
+bg "img\mado.jpg",10
+ld c,":a;img\rena-choiwara.jpg",10
+「証言はここまでなんだよ。・・・だよ。」\
+ld c,":a;img\rena-choiwara2.jpg",10
+「魅ぃちゃんの発言にどこかおかしなところはなかったかな？・・・かな？」\
+
+bg "img\black.bmp",10
+bg "img\02.jpg",10
+
+goto *mionshogen
+
+
+*igi1
+
+どの点を突きますか
+select "１．おじさん",*ojisan,"２．時刻",*jikoku,"３．朝早く来た理由",*riyuu,"次の証言へ進む",*next1
+
+*ojisan
+
+bg "img\01.jpg",10
+
+ld l,":a;img\k2-ban.jpg",10
+「おじさん？証言者は女性に見えますが・・・」\
+ld r,":a;img\rena-bikkuri.jpg",10
+「圭一くん、今はそんなことに拘っているときじゃないと思うんだよ。・・・だよ。」\
+
+bg "img\02.jpg",10
+
+goto *next1
+
+*jikoku
+
+bg "img\01.jpg",10
+
+ld l,":a;img\k2-ban.jpg",10
+「朝早くとは何時ですか？」\
+ld r,":a;img\mion-wink.jpg",10
+「８時ちょっと前、７時５０分ごろだったと思うよ。」\
+ld c,":a;img\rena-bikkuri.jpg",10
+「うわぁ、普段の魅ぃちゃんじゃ考えられない早さなんだよ。・・・だよ。」\
+bg "img\02.jpg",10
+goto *next1
+
+*riyuu
+
+mov %5,1
+bg "img\01.jpg",10
+ld l,":a;img\k2-ban.jpg",10
+「なぜその日は早く行ったんですか？普段は俺たちと待ち合わせて行くのに・・・。」\
+ld r,":a;img\mion-odoroki.jpg",10
+「うっ・・・。」\
+ld r,":a;img\mion-futeki.jpg",10
+「まあなんていうかね、なんとなくだよ。朝早く目が覚めてしまったのに、することもないので学校に来てみたって訳さ。」\
+bg "img\02.jpg",10
+goto *next1
+
+
+*igi2
+bg "img\01.jpg",10
+ld l,":a;img\k2-ban.jpg",10
+「証言者は朝早く来たのだから、知恵先生が居なくても不思議じゃないのでは？」\
+ld r,":a;img\mion-akusho2.jpg",10
+「だって、知恵先生って来るのが無茶苦茶早いって噂じゃん。」\
+ld r,":a;img\mion-akusho.jpg",10
+「知恵先生がこの学校に赴任以来、知恵先生より先に登校できた人は居ないっていう話だよ。」\
+bg "img\02.jpg",10
+goto *next2
+
+
+*igi3
+
+if %5 == 1 goto *bunki_A
+bg "img\01.jpg",10
+ld c,":a;img\k2-agoyubi.jpg",10
+（この証言、何かひっかかるんだが・・・。）\
+bg "img\02.jpg",10
+goto *next3
+
+
+*bunki_A
+mov %6,1
+bg "img\01.jpg",10
+ld l,":a;img\rena-normal.jpg",10
+「魅ぃちゃんは、わざわざ探すほど知恵先生に会いたがっていた。」\
+ld l,":a;img\rena-komari.jpg",10
+「たまたま朝早く起きて、なんとなく学校に行ったというのに。」\
+ld l,":a;img\rena-komari2.jpg",10
+「どうしてなのかな？・・・かな？」\
+
+ld r,":a;img\mion-yowari.jpg",10
+「え、ええっと。朝の挨拶は人生の基本というか、なんというか・・・。」\
+ld r,":a;img\mion-futeki.jpg",10
+「ああっ、そうそう。もしかして『朝、知恵先生より先に来るのは不可能だ』という伝説を打ち破ったのかもって思って探したんだよ。」\
+bg "img\02.jpg",10
+if %5 == 1 & %6 == 1 & %7 == 1 goto *flag
+goto *next3
+
+
+
+*igi4
+bg "img\01.jpg",10
+ld l,":a;img\k2-ban.jpg",10
+「証言者はなぜ知恵先生が死んでいると判断したのですか？」\
+
+ld r,":a;img\mion-yowari.jpg",10
+「そりゃ、ピクリとも動かなかったし、煮えたぎったカレー鍋をかぶって生きている可能性はないかと・・・。」\
+
+select "次の発言へ移る",*next4,"更に揺さぶる",*igi6
+
+
+*igi6
+mov %7,1
+cl a,10
+ld l,":a;img\k2-agoyubi.jpg",10
+「煮えたぎった？」\
+ld l,":a;img\k2-ban.jpg",10
+「証言者が登校した時点では、カレーはまだ熱かったのですか！？」\
+
+ld r,":a;img\satoko2-igi.jpg",10
+「異議あり！」\
+
+ld r,":a;img\satoko2-ban.jpg",10
+「その質問は本件と関係ないと思うのですわ。」\
+
+ld l,":a;img\k2-shiryo.jpg",10
+「いいや、関係大有りだよ。朝の時点でカレーが熱かったなら、犯行は今日、月曜の朝に行われたことになる。」\
+
+cl a,10
+ld c,":a;img\mion-odoroki.jpg",10
+「ええっと、その・・・。熱くはなかったのかな。今、考えてみると。」\
+ld c,":a;img\mion-odoroki2.jpg",10
+「熱かったら、もっと匂いがするはずだから。カレー鍋は熱いものっていう先入観があって、ええっと・・・」\
+
+ld r,":a;img\satoko2-horane.jpg",10
+「そうですわ。状況にビックリしって判断を誤るってことはよくあることですわ。」\
+
+cl a,10
+if %5 == 1 & %6 == 1 & %7 == 1 goto *flag
+goto *next4
+
+;■証言からの情報がそろう
+
+*flag
+
+bg "img\01.jpg",10
+
+ld l,":a;img\rena-choiwara.jpg",10
+「弁護側はここで作戦タイムを要求するんだよ。・・・だよ。」\
+
+ld c,":a;img\rika-nipa.jpg",10
+「了解なのです。では、一旦休憩にして１５分後に再開にするのですよ。」\
+
+stop
+
+bg "img\kizuti.jpg",10
+wave "sound\wood05.wav"
+wait 500
+
+;■作戦タイム
+
+bg "img\black.bmp",10
+wait 1200
+
+!s60
+
+br
+br
+br
+br
+br
+　　１２月ＸＸ日　月曜日　午前１０時４５分
+br
+　　　　学級裁判所　被告人第１控え室\
+
+wait 2000
+bgm "sound\tamflash1.mp3"
+bg "img\hikoku.jpg",10
+wait 1000
+
+!s40
+
+ld r,":a;img\rena-bikkuri2.jpg",10
+「圭一君、なんか魅ぃちゃんの言っていることは変だね。・・・だね。」\
+
+ld l,":a;img\k-normal.jpg",10
+「あの魅音が、朝早く登校するってだけでも変だし・・・」\
+
+ld r,":a;img\rena-komari.jpg",10
+「なんとなく来たという割りには、知恵先生を探していたり・・・」\
+
+ld l,":a;img\k-ku.jpg",10
+「先生がかぶっていたカレーは既に冷めていたのに、熱いカレーを被ったと判断している。」\
+
+ld r,":a;img\rena-nande.jpg",10
+「そうだね、普通ハッキリとした情報がないのなら、どんな絶望的な状況でも生きている可能性を信じたくなるもの。なのに始めっから死んでいると断定してる・・・。」\
+
+ld l,":a;img\k-normal.jpg",10
+「先生がこうなっていることを知っていて、居ても立ってもいられず早く来たっていう線が強そうだ。」\
+
+ld r,":a;img\rena-normal2.jpg",10
+「そうだね、その線で反撃してみるんだよ。・・・だよ。」\
+
+wait 1200
+stop
+bg "img\black.bmp",10
+wait 1200
+
+!s60
+
+br
+br
+br
+br
+br
+　　１２月ＸＸ日　月曜日　午前１１時００分
+br
+　　　　　　学級裁判所　第１法廷\
+
+bg "img\kizuti.jpg",10
+wave "sound\wood05.wav"
+wait 500
+
+bgm "sound\tamflash1.mp3"
+bg "img\01.jpg",10
+wait 1000
+
+!s40
+
+ld c,":a;img\rika-nipa.jpg",10
+「では、再開するのですよ。」\
+
+cl a,10
+
+ld l,":a;img\k2-ban.jpg",10
+「裁判長。先ほどの法廷で、証言者の発言がずいぶん揺らいでいたように思います。」\
+
+ld r,":a;img\satoko2-giku.jpg",10
+「ショッキングな場面を見てしまったのですもの。証言が揺らぐこともありますですわ。」\
+
+cl a,10
+
+ld c,":a;img\rika-normal.jpg",10
+「では圭一は魅音こそが犯人であると逆告訴するというのですか？」
+
+select "１．はい",*hai,"２．いいえ",*iie
+
+*hai
+;■はい
+
+stop
+bgm "sound\fang.mp3"
+
+cl a,10
+
+ld l,":a;img\k2-igi.jpg",10
+「この状況、俺より魅音の方が、ハッキリ怪しいと言えると思います。」\
+
+cl a,10
+
+ld c,":a;img\mion-odoroki.jpg",10
+（ぎくっ！！）\
+
+cl a,10
+
+ld r,":a;img\satoko2-normal.jpg",10
+「そんな大層なこと言って大丈夫ですの？」\
+ld r,":a;img\satoko2-horane.jpg",10
+「こちらには、圭一さん以外には犯行ができなかったという決定的証拠もあるのですわよ。」\
+
+goto *tsuzuki
+
+*iie
+;■いいえ
+
+cl a,10
+ld l,":a;img\k2-komari.jpg",10
+「いや、そうとは限らないけど・・・」\
+
+ld r,":a;img\satoko2-normal.jpg",10
+「ほら、そうでしょうに。自信もないのに変なことを言って法廷を混乱させた罪は重いですわよ。」\
+ld r,":a;img\satoko2-horane.jpg",10
+「それに圭一さん以外には犯行ができなかったという決定的証拠もあるのですわよ。」\
+
+*tsuzuki
+;■つづき
+
+stop
+cl a,10
+
+ld l,":a;img\k2-bibiri.jpg",10
+ld c,":a;img\rena-bikkuri2.jpg",10
+「な、なんだってー！！！」\
+
+wait 500
+
+cl a,10
+
+bgm "sound\bgml025.mp3"
+
+ld r,":a;img\satoko2-shiryo.jpg",10
+「確かに遺体は煮えたぎったカレーを被るという状況で高熱にさらされていたので、遺体からは死亡診断時刻は測れませんわ。」\
+ld r,":a;img\satoko2-normal.jpg",10
+「でも知恵先生は土曜日の夜に帰宅していないっていうことが分かっているのですわ。」\
+ld r,":a;img\satoko2-shiryo.jpg",10
+「これは隣人の証言もありますし、死亡時の服装も土曜のまま、電気やガスの使用状況からも明らかですわ。これも証拠として提出させていただきますわ。」\
+
+証拠４：電気会社の調査書@
+br
+知恵宅の電気は土曜の朝以降使われていない。\
+
+ld r,":a;img\satoko2-horane.jpg",10
+「校長先生にも確認しましたけど、あの日は残ってするべき仕事もなかったですわ。」\
+ld r,":a;img\satoko2-normal.jpg",10
+「土曜日は『料理天国』を見るためにいつも早く帰っていたそうですわ。」\
+
+bg "img\mado.jpg",10
+
+ld c,":a;img\rena-hau.jpg",10
+「料理天国・・・。試食係の龍虎さん、かあいいんだよ。はぅ。」\
+ld c,":a;img\rena-hau2.jpg",10
+wait 500
+
+bg "img\01.jpg",10
+
+ld r,":a;img\satoko2-shiryo.jpg",10
+「凶器として大きなカレー鍋が使われたことから犯行現場は学校以外ありえない。」\
+
+ld r,":a;img\satoko2-normal.jpg",10
+「そして土曜日の放課後、知恵先生が帰宅するまでのわずかな時間に犯行が行われた。」\
+「この時間に先生と会っていたのは圭一さんだけ。」\
+
+ld r,":a;img\satoko2-igi.jpg",10
+「犯行は圭一さん以外には不可能、つまり圭一さんが犯人なのですわ。」\
+
+cl a,10
+
+ld c,":a;img\rika-normal.jpg",10
+「ほう。それは決定的な状況なのですよ。」\
+
+bg "img\mado.jpg",10
+
+ld c,":a;img\rena-komari.jpg",10
+「ちなみに魅ぃちゃんは、土曜日の放課後は・・・」\
+
+bg "img\01.jpg",10
+
+ld c,":a;img\mion-akusho.jpg",10
+「何言ってるの、レナ。あんたと一緒に帰って、行ったじゃない。興宮スポーツセンターに。」\
+ld c,":a;img\mion-futeki.jpg",10
+「その後も祝勝会と称して、朝までカラオケを歌ったじゃない。」\
+
+bg "img\mado.jpg",10
+
+ld c,":a;img\rena-nande.jpg",10
+「はぅ。魅ぃちゃんのアリバイは完璧なんだよ。・・・だよ。」\
+
+ld c,":a;img\rena-hau.jpg",10
+「セーラー服と機関銃・・・さすが、本職だけあって、凄みがあって・・・かぁいかったんだよ。　・・・だよ。」\
+ld c,":a;img\rena-hau2.jpg",10
+
+stop
+
+wait 1500
+
+bg "img\kizuti.jpg",10
+wave "sound\wood05.wav"
+wait 500
+
+
+
+
+
+
+
+
+
+bg "img\01.jpg",10
+
+ld c,":a;img\rika-normal.jpg",10
+「反論も無いようですし、そろそろ判決に移りたいと思うのですよ。」\
+
+bg "img\mado.jpg",10
+
+ld c,":a;img\rena-komari.jpg",10
+「圭一くん、何か無いの？圭一くん、しっかりして！？」\
+
+;（暗転、圭一のみ）
+
+wait 1200
+;stop
+
+
+
+bg "img\black.bmp",10
+;bgm "sound\bgml026.mp3"
+wait 1200
+
+
+ld c,":a;img\k-ku.jpg",10
+
+なんだって！？
+俺以外の人間には犯行が不可能だって？\
+
+ld c,":a;img\k-normal.jpg",10
+確かに俺が先生と会っていたとき、俺以外の生徒は皆下校していたし、営林所の人たちも出て行っていた。\
+
+ld c,":a;img\k-ku.jpg",10
+先生にはあの後に残る理由もなく、『料理天国』を見るためにも早く帰宅するのは土曜放課後の常だった。\
+
+ld c,":a;img\k-komari.jpg",10
+しかし、先生は帰宅することなく、学校でカレー鍋を被っていた。\
+
+ld c,":a;img\k-ku.jpg",10
+俺が帰り際に鍋にぶつかって！？\
+
+ld c,":a;img\k-komari.jpg",10
+いやそんな感触はなかったと思う。\
+
+ld c,":a;img\k-normal.jpg",10
+確かに、記憶にはない。
+しかし、俺の記憶は絶対だろうか？\
+
+ld c,":a;img\k-ku.jpg",10
+記憶にはないことをふらっとやってしまう・・・そういう人もいると聞く。\
+
+ld c,":a;img\k-normal.jpg",10
+俺はそうでない・・・と思いたいが、やっていたとしても記憶にはないのだから確かめようがない・・・。\
+
+ld c,":a;img\k-komari.jpg",10
+まさか、俺があの知恵先生を！？\
+
+ld c,":a;img\k-ku.jpg",10
+そんな・・・\
+
+stop
+
+wait 1200
+
+
+
+
+bgm "sound\tamflash1.mp3"
+bg "img\mado.jpg",10
+wait 1200
+
+ld c,":a;img\rena-komari.jpg",10
+「圭一くん、しっかりして。」\
+wait 1200
+bg "img\01.jpg",10
+ld l,":a;img\k2-komari.jpg",10
+「はっ、俺は・・・！？」\
+
+bg "img\kizuti.jpg",10
+wave "sound\wood05.wav"
+wait 400
+wave "sound\wood05.wav"
+wait 500
+
+
+
+
+
+bg "img\01.jpg",10
+
+ld c,":a;img\rika-normal.jpg",10
+「では、判決なのですよ。」\
+
+stop
+
+cl a,10
+
+「ちょっと、待ったあ！！！！！！！！！！！」\
+
+
+wait 500
+
+bgm "sound\tamco07.mp3"
+
+
+ld r,":a;img\satoko2-giku.jpg",10
+「はっ！？誰ですの？」\
+
+ld l,":a;img\k2-ehen.jpg",10
+「俺だ！」\
+
+ld r,":a;img\satoko2-igi.jpg",10
+「この期に及んで何ですの？」\
+
+ld l,":a;img\k2-komarimae.jpg",10
+（駄目だ、何も言うことがない・・・）\
+
+bg "img\mado.jpg",10
+ld c,":a;img\rena-bikkuri2.jpg",10
+「圭一くん、どうしたの？」\
+
+wait 500
+bg "img\01.jpg",10
+wait 500
+
+ld c,":a;img\rika-normal.jpg",10
+「これ以上、法廷を止めることは許しませんですよ。」\
+
+wait 500
+bg "img\black.bmp",10
+wait 500
+
+ld c,":a;img\k2-komari.jpg",10
+（もはやこれまでか・・・。）\
+
+ld c,":a;img\k2-bibiri.jpg",10
+（判決が下れば、一切の行動の自由がなくなり、あとは死刑を待つだけ。）\
+
+ld c,":a;img\k2-agoyubi.jpg",10
+（ならば、今が思うままに行動できる最後の機会だ。）\
+
+ld c,":a;img\k2-ehen.jpg",10
+（今こそ、人生最後の輝きを放つとき！）\
+
+ld c,":a;img\k2-ban.jpg",10
+（思い残すことがないよう、欲望のままに行動してやる！！）\
+
+*rinne
+ld c,":a;img\k2-ban.jpg",10
+
+誰を襲いますか？
+select "１．レナ",*rena,"２．魅音",*mion,"３．沙都子",*satoko,"４．梨花",*rika
+
+;魅音以外の場合は、変態扱いされてGAMEOVER→罰ゲーム。
+
+*rena
+
+bg "img\black.bmp",10
+wait 1200
+
+レナを襲う！？
+なんて愚かな判断をしてしまったんだ・・・俺は。
+
+ld c,":a;img\rena-warai2.jpg",10
+
+戦力の差は圧倒的だった・・・。\
+スパパパパ・・・\
+パンチなんだか、キックなんだか、それとも頭突きなんだか。\
+それさえも見極めることができずに・・・\
+ケンシロウに襲い掛かるモヒカン野郎のように、@俺は息絶えた。\
+
+goto *gameover
+
+
+*satoko
+
+bg "img\black.bmp",10
+wait 1200
+
+バリバリバリバリ・・・
+スカートに手を掛けたその瞬間、強力な電流が襲い掛かってきた。\
+薄れゆく意識の中で、最後に見た沙都子は、\
+ld c,":a;img\satoko-normal.jpg",10
+「我が夫となるものは、更ににおぞましきモノを見るだろう」\
+と語りかけているように見えた・・・\
+
+goto *gameover
+
+
+*rika
+
+bg "img\black.bmp",10
+wait 1200
+
+見た目に似合わず老獪な梨花ちゃん。\
+俺のたくらみを察知していたのか、飛び掛ったがサラリと身をかわされてしまった。\
+ld c,":a;img\rika-nipa.jpg",10
+その次の瞬間、背中にチクリと何かが刺さる感触があった。
+薄れゆく意識の中で最後にみたのは、針が不気味に光る注射器を持った梨花ちゃんであった。\
+
+goto *gameover
+
+
+*gameover
+
+br
+br
+br
+br
+br
+br
+br
+br
+br
+　　　　　　　ＧＡＭＥ　ＯＶＥＲ\
+wait 2000
+cl a,10
+wait 3000
+
+ld c,":a;img\rika2-komari.jpg",10
+「圭一、間違えちゃったのですか？」\
+ld c,":a;img\rika2-normal.jpg",10
+「圭一は、今、時間の環の中に居る。もう一度チャンスがあるのですよ。」\
+ld c,":a;img\rika2-warai.jpg",10
+「圭一の選択で未来に進めるか否かが決まるのですよ。」\
+ld c,":a;img\rika2-nipa.jpg",10
+「よくよく考えて選択するのですよ。」\
+
+cl a,10
+wait 3000
+
+goto *rinne
+
+
+
+*mion
+;■魅音選択の場合
+
+stop
+bg "img\01.jpg",10
+
+ld l,":a;img\rena-bikkuri.jpg",10
+「圭一くん！」\
+ld r,":a;img\satoko2-giku.jpg",10
+「圭一さん！」\
+ld c,":a;img\rika-normal.jpg",10
+「圭一！」\
+
+bg "img\01.jpg",10
+bgm "sound\45.mp3"
+
+ld c,":a;img\in-suka.jpg",10
+「うわっ、何！？ちょっ・・・、やめ・・・」\
+
+bg "img\black.bmp",10
+
+ld c,":a;img\k-niyari.jpg",10
+「くんくん・・・」\
+（欲望の赴くままに、クンクンしてやるぜ！）\
+（全年齢向けソフトの限界まで挑戦だ！）\
+
+bg "img\01.jpg",10
+ld r,":a;img\satoko2-giku.jpg",10
+「とち狂ったの？圭一さん！」\
+
+ld l,":a;img\rena-nande.jpg",10
+「圭一くん！変態さんなんだよ！・・・だよ！」\
+
+bg "img\black.bmp",10
+
+ld c,":a;img\k-normal.jpg",10
+（アレ！？何だ？この美味しそうな匂い。）\
+
+ld c,":a;img\k-niyari.jpg",10
+「スパイシーな香りがする・・・」\
+
+bg "img\01.jpg",10
+ld c,":a;img\in-suka.jpg",10
+「て・・・、訂正しろ！スパイシーな匂いなんて・・・断じてしない！！」\
+
+bg "img\black.bmp",10
+ld c,":a;img\k-normal.jpg",10
+「この匂いはカレーだ！！」\
+
+stop
+
+bg "img\01.jpg",10
+ld l,":a;img\rena-bikkuri.jpg",10
+ld r,":a;img\satoko2-giku.jpg",10
+ld c,":a;img\rika-normal.jpg",10
+「えっ・・・！？」\
+
+bg "img\black.bmp",10
+
+ld c,":a;img\in-suka.jpg",10
+（えっ！？あのとき返り血ならぬ、返りカレーを浴びた服は全部井戸に処分したし・・・）\
+（シャワーにも長い時間入って石鹸の匂いでカレーの匂いをよく打ち消したはずなのに・・・）\
+
+
+bgm "sound\tenku.mp3"
+
+
+bg "img\fujiko.jpg",10
+「ここだ！魅音のトレードマーク、普段は肩から提げている拳銃。」\
+「制服の時は、スカートの中にあったんだ。」\
+「その銃口の中からカレーの匂いがするぞ。」\
+
+
+
+bg "img\01.jpg",10
+
+ld l,":a;img\rena-bikkuri.jpg",10
+ld r,":a;img\satoko2-giku.jpg",10
+ld c,":a;img\rika-normal.jpg",10
+「な、なんだって！？」\
+
+cl a,10
+ld c,":a;img\mion-odoroki.jpg",10
+「くっ・・・」\
+
+bg "img\black.bmp",10
+ld c,":a;img\mion-odoroki.jpg",10
+（銃口の中か・・・。見落ちたわ・・・。）\
+bg "img\01.jpg",10
+
+ld l,":a;img\k2-ban.jpg",10
+「こんな中にカレーが入るなんて通常はありえない。」\
+ld l,":a;img\k2-igi.jpg",10
+「カレーがすごく跳ね散るようなことに出会わない限り！」\
+
+ld r,":a;img\satoko2-giku.jpg",10
+「くっ・・・」\
+
+ld r,":a;img\satoko2-igi.jpg",10
+「圭一さん、忘れたんですの？魅音さんには完璧なアリバイがあるってことを。」\
+
+bg "img\mado.jpg",10
+
+ld c,":a;img\rena-nande.jpg",10
+「そうだよ、圭一くん。魅ぃちゃんには不可能だよ。・・・だよ。」\
+
+bg "img\01.jpg",10
+
+ld c,":a;img\mion-akusho.jpg",10
+「確かにこんなところにカレーが付いているのは、あたしにとっても不可解だけど・・・」\
+「あたしにはその時間、犯行をすることができなかった。」\
+ld c,":a;img\mion-futeki.jpg",10
+「これで十分でしょ、圭ちゃん。」\
+
+cl a,10
+
+
+ld l,":a;img\k2-komarimae.jpg",10
+（駄目なのか・・・！？　一筋の光明が見えたと思ったんだけど、それでも結局は駄目なのか？）\
+
+cl a,10
+
+ld c,":a;img\rika-normal.jpg",10
+「被告はどういう主張をしたいのですか？」
+
+select "Ａ：犯人は魅音である。",*hannin_dearu,"Ｂ：魅音は犯人ではない。",*hannin_janai
+
+
+*hannin_janai
+;■Ｂ：魅音は犯人ではない。
+
+cl a,10
+
+ld l,":a;img\k2-ban.jpg",10
+「やっぱり、犯人は魅音じゃないよ。」\
+
+ld r,":a;img\satoko2-horane.jpg",10
+「そうでしょうとも。」\
+
+ld r,":a;img\satoko2-normal.jpg",10
+「魅音さんには鉄壁のアリバイがある」\
+
+ld l,":a;img\k2-komari.jpg",10
+（この主張では、道が開けない。ニッチもサッチもいかないよ・・・）\
+（ええい、イチかバチかの勝負にでてやるぜ。）\
+
+ld l,":a;img\k2-ban.jpg",10
+「やっぱり、犯人は魅音だよ。」\
+
+cl a,10
+
+ld c,":a;img\rika-komari.jpg",10
+「圭一、さっきから言ってることがコロコロかわっているのですよ。」\
+ld c,":a;img\rika-normal.jpg",10
+「苦し紛れに法廷を混乱させようとしているのですか。」\
+「それに、魅ぃの土曜日のアリバイは完璧なものだと思うのですよ。」\
+
+cl a,10
+
+goto *not_doyou
+
+*hannin_dearu
+;■Ａ：犯人は魅音である。
+
+cl a,10
+
+ld l,":a;img\k2-ban.jpg",10
+「やっぱり、犯人は魅音だよ。」\
+
+ld r,":a;img\satoko2-udegumi.jpg",10
+「どういうことですの？」\
+
+bg "img\mado.jpg",10
+
+ld c,":a;img\rena-nande.jpg",10
+「魅ぃちゃんは確かに、私と一緒にいた。その主張には無理があるんじゃないかな？・・・かな？」\
+
+bg "img\01.jpg",10
+
+ld c,":a;img\rika-normal.jpg",10
+「どういう根拠で魅音が犯人というのですか？出鱈目な主張で法廷を混乱させ、人を訴えたという罪まで被ることになるのですよ。」\
+
+bg "img\black.bmp",10
+
+
+ld c,":a;img\k2-komarimae.jpg",10
+（ああっ、言ってしまった。完璧なアリバイがある魅音が犯人だなんて・・・。）\
+
+ld c,":a;img\k2-komari.jpg",10
+（これで間違いなら、ただの死刑から『村中引き回しの上、磔獄門』に刑罰がグレードアップしちゃうよ・・・。）\
+
+ld c,":a;img\k2-agoyubi.jpg",10
+（しかし、もう言ってしまった以上、この主張でいくしかない。でも、魅音が犯人だとして、なんで完璧なアリバイがあるんだ？）\
+
+*aribai
+
+select "Ａ：アリバイはウソ",*uso,"Ｂ：犯行は土曜日ではない",*not_doyou
+
+*uso
+
+;■Ａ：アリバイはウソ
+
+bg "img\01.jpg",10
+
+ld l,":a;img\k2-igi.jpg",10
+「魅音のアリバイはウソだ！」\
+
+bg "img\mado.jpg",10
+
+ld c,":a;img\rena-higurashi.jpg",10
+「圭一くん、ちゃんと聞いてたかな？・・・かな？」\
+ld c,":a;img\rena-higurashi2.jpg",10
+「土曜日から日曜の朝まで、レナは魅ぃちゃんとずっと一緒だったんだよ。・・・だよ。」\
+ld c,":a;img\rena-higurashi.jpg",10
+「それもと、圭一くんはレナのことも疑っているのかな？・・・かな？」\
+
+bg "img\black.bmp",10
+
+goto *aribai
+
+
+*not_doyou
+
+;■Ｂ：犯行は土曜日ではない
+
+ld c,":a;img\k2-agoyubi.jpg",10
+（そうだ、魅音の土曜日のアリバイは完璧なものだ。ということは、犯行が土曜日ではなかったんだ。）\
+
+bg "img\01.jpg",10
+
+ld l,":a;img\k2-normal.jpg",10
+「確かに土曜日の魅音のアリバイは完璧だ。それは認める。」\
+
+ld r,":a;img\satoko2-igi.jpg",10
+「ほら、御覧なさい。魅音さんは犯人ではないんでしょ。」\
+
+ld l,":a;img\k2-ban.jpg",10
+「しかし、だ。犯行が土曜日ではなかったとしたら！？」\
+
+cl a,10
+
+ld c,":a;img\mion-odoroki.jpg",10
+（ギクッ）\
+
+ld r,":a;img\satoko2-shiryo.jpg",10
+「それはありえませんですわ。先生は帰宅する前に事件に会ってしまったのですもの。」\
+
+bg "img\black.bmp",10
+
+ld c,":a;img\k2-komarimae.jpg",10
+（ああ、そうだったんんだよなー。先生は帰宅しなかった。しかし土曜日の犯行でもない。どういうことだろ・・・。）\
+
+bg "img\01.jpg",10
+
+ld c,":a;img\rika-normal.jpg",10
+「圭一、犯行が土曜日でないとはどういうことですか？」\
+
+
+bg "img\black.bmp",10
+
+ld c,":a;img\k2-komari.jpg",10
+（それは、俺が聞きたいところだよ。先生は誰も居ない学校に日曜日まで居た。仕事もないのに。『料理天国』見るのも諦めて・・・。ありえないよ・・・。）\
+
+bg "img\01.jpg",10
+
+ld l,":a;img\k2-ehen.jpg",10
+「決定的な証拠があるんだよ。犯行は土曜日ではなかったという。」\
+
+bg "img\black.bmp",10
+
+ld l,":a;img\k2-komari.jpg",10
+（ああ、また大きな口叩いちゃった・・・）\
+
+bg "img\01.jpg",10
+
+ld c,":a;img\rika-normal.jpg",10
+stop
+「その証拠はどれですか。指し示してください。」\
+
+bgm "sound\bgm0042_SFX.mp3"
+
+
+
+
+
+
+*sentakushi2
+mov %5,1
+
+br
+知恵の死亡診断書
+br
+カレー
+br
+営林署員の証言
+br
+電気会社の調査書
+
+csel "読む",*ss1,"突きつける",*ss2,
+"読む",*ss3,"突きつける",*ss4,
+"読む",*ss5,"突きつける",*ss6,
+"読む",*ss7,"突きつける",*ss8
+
+
+
+
+*ss1
+知恵の死亡診断書@
+br
+知恵先生は、中身の入ったカレー鍋を被って硬直していた。@
+死亡日時は不明。@
+br
+保健委員　富田大樹\
+
+goto *sentakushi2
+
+*ss2
+
+ld c,":a;img\rena-nande.jpg",10
+「どうかな？・・・どうかな？」\
+「それが決定的証拠なのかな」\
+「レナにはそう思えないんだよ。・・・だよ」\
+ld c,":a;img\rena-komari.jpg",10
+
+goto *sentakushi2
+
+*ss3
+カレー@
+br
+本事件の凶器となったカレー。@
+直径６０ｃｍ深さ３０ｃｍ程度の銅製の鍋に入っていた。@
+状態から、鍋ごと勢い良く被せられたと考えられる。\
+
+goto *sentakushi2
+
+*ss4
+goto *sentakushi2_nuke
+
+
+*ss5
+営林署員の証言@
+br
+土曜の放課後、１２時半ごろ、私は帰宅しました。@
+学校には私の他には、知恵先生と前原君だけがいました。@
+２人は、『カレー食べさせてくれよー』、『だめです』といった内容の押し問答をしていました。\
+
+
+goto *sentakushi2
+
+*ss6
+ld c,":a;img\rena-nande.jpg",10
+「どうかな？・・・どうかな？」\
+「それが決定的証拠なのかな」\
+「レナにはそう思えないんだよ。・・・だよ」\
+ld c,":a;img\rena-komari.jpg",10
+
+goto *sentakushi2
+
+
+
+
+*ss7
+電気会社の調査書@
+br
+知恵宅の電気は土曜の朝以降使われていない。\
+
+goto *sentakushi2
+
+*ss8
+ld c,":a;img\rena-nande.jpg",10
+「どうかな？・・・どうかな？」\
+「それが決定的証拠なのかな」\
+「レナにはそう思えないんだよ。・・・だよ」\
+ld c,":a;img\rena-komari.jpg",10
+goto *sentakushi2
+
+*sentakushi2_nuke
+
+stop
+
+
+
+
+
+
+
+
+;■証拠２：カレー鍋の状況
+
+cl a,10
+
+ld l,":a;img\k2-ban.jpg",10
+「知恵先生が大好きなテレビ番組や帰宅を諦めてまで学校に残った理由。それはカレー。カレー以外考えられません。」\
+
+cl a,10
+
+ld c,":a;img\rika-normal.jpg",10
+「カレーがどうかしたのですか？」\
+
+bg "img\black.bmp",10
+
+ld l,":a;img\k2-komari.jpg",10
+（それはこっちが聞きたいんだって！）\
+
+bg "img\mado.jpg",10
+
+
+
+
+
+bgm "sound\tamsp11.mp3"
+
+
+
+
+
+
+
+
+
+
+
+ld c,":a;img\rena-choiwara.jpg",10
+「そうか圭一くん、カレーね！知恵先生は私たちによく煮込まれた洋風カレーを食べさせたがっていた。」\
+
+bg "img\01.jpg",10
+
+ld r,":a;img\satoko2-giku.jpg",10
+「ま、まさか・・・」\
+
+ld l,":a;img\rena-choiwara2.jpg",10
+「そう。洋風カレーを最高に美味しい状態にするには・・・」\
+
+ld r,":a;img\satoko2-normal.jpg",10
+「弱火でコトコト長時間煮込む必要がある。」\
+
+bg "img\black.bmp",10
+
+ld c,":a;img\k2-komarimae.jpg",10
+（そ、そうだったのか・・・！？）\
+
+bg "img\01.jpg",10
+
+ld r,":a;img\satoko2-giku.jpg",10
+「しかし、そんなこと専門のレストランでもなければやってないはずですわ。」\
+
+ld c,":a;img\rika-nipa.jpg",10
+「でも、知恵先生のカレーに掛ける情熱は、専門のレストランにも引けを取ることはないのですよ。」\
+
+cl a,10
+
+ld l,":a;img\k2-ehen.jpg",10
+「ふっふっふ。諸君も分かってくれたようだね。先生が帰宅をしなかったのは、カレー鍋に絶えず火をいれるため。」\
+ld l,":a;img\k2-igi.jpg",10
+「カレーの煮込み具合が犯行日時を教えてくれるよ。」\
+
+cl a,10
+
+ld c,":a;img\rika-warai.jpg",10
+「現場は保存されているのですよ。さっそく、カレー鍋を調べるのですよ。」\
+
+cl a,10
+
+ld c,":a;img\mion-yowari.jpg",10
+「その必要はないよ。」\
+
+ld c,":a;img\mion-yowari2.jpg",10
+「ジャガイモやニンジンは形がなくなるほど溶けてルーにコクと旨味を加え、お肉もとろけるような美味しさだったよ。まさに最高のカレーだったよ・・・。」\
+
+wait 2000
+stop
+bg "img\white.bmp",10
+bgm "sound\tamsu08.mp3"
+wait 2000
+
+
+
+
+bg "img\chourishitsu.jpg",10
+
+ld r,":a;img\mion-normal3.jpg",10
+「はむはむ・・・。うーん旨いねぇ。やっぱり日曜日はカレー曜日だよ。」\
+
+;ガラッ
+
+ld l,":a;img\tie-okori.jpg",10
+「誰ですか？そこでカレーを食べているのは」\
+「あれほど、月曜日まで寝かせておこうと言ったのに！！」\
+
+ld r,":a;img\mion-odoroki3.jpg",10
+「ち・・・知恵先生！なんでここに？」\
+
+ld l,":a;img\tie-gekido.jpg",10
+「私だって食べたいのを我慢して、我慢して、昨日から寝ずの番で火を入れて・・・それを・・・それを・・・。今まさに花開こうというツボミをむしってしまうなんて・・・。ちゃんと償ってもらいますよ。」\
+
+ld r,":a;img\mion-tohoho3.jpg",10
+（こ・・・殺される！！）\
+
+ld r,":a;img\mion-odoroki3.jpg",10
+「えいっ、これでも喰らえ！！」\
+
+ld l,":a;img\tie-komari.jpg",10
+「きゃあぁぁぁぁ・・・」\
+wait 1000
+bg "img\black.bmp",10
+wait 1500
+bg "img\sitai.jpg",10
+
+wait 2500
+stop
+bg "img\white.bmp",10
+bgm "sound\tamsp11.mp3"
+wait 2000
+
+bg "img\01.jpg",10
+
+
+ld c,":a;img\mion-yowari.jpg",10
+「・・・って訳さ。」\
+
+wait 1500
+
+cl a,10
+
+wait 500
+
+bg "img\kizuti.jpg",10
+wave "sound\wood05.wav"
+wait 400
+wave "sound\wood05.wav"
+wait 500
+
+;カンカン（←木槌を叩く音）
+
+bg "img\01.jpg",10
+
+ld c,":a;img\rika-normal.jpg",10
+「では、判決なのですよ。この裁判は圭一の裁判なので、魅ぃには追って沙汰するのですよ。」\
+「【被告人・前原圭一】は、・・・」\
+
+;■判決
+
+ld c,":a;img\rika-nipa.jpg",10
+
+ld l,":a;img\yuu.jpg",10
+wait 600
+
+ld r,":a;img\yuuzai.jpg",10
+wait 600
+
+cl l,10
+cl r,10
+
+stop
+
+ld c,":a;img\rika-warai.jpg",10
+「圭一を@“コンビニの会計で『ありがとうございました』と言われたら、@必ず『どういたしまして』と返事しなくてはいけない』の刑”に処すのですよ。」\
+
+bgm "sound\engeki.mp3"
+
+ld l,":a;img\k2-komari.jpg",10
+「ええっ、な、なんでだよ！濡れ衣だったのに。そんな微妙に恥ずかしい・・・」\
+
+ld c,":a;img\rika-nipa.jpg",10
+「圭一は変態なのですよ。」\
+
+ld r,":a;img\satoko-normal.jpg",10
+「変態ではしかたありませんですわね。」\
+
+bg "img\mado.jpg",10
+
+ld c,":a;img\rena-hau.jpg",10
+「はぅ。礼儀正しい圭一くん、かあいいと思うんだよ。・・・だよ。」\
+ld c,":a;img\rena-hau2.jpg",10
+
+wait 2000
+bg "img\black.bmp",10
+bgm "sound\bgml010.mp3"
+wait 3000
+
+;カレー鍋を被った知恵に動きあり。（手を動かすか、腹が膨らむか）
+
+bg "img\sitai.jpg",11
+wait 300
+bg "img\fukkatu.jpg",11
+wait 300
+bg "img\sitai.jpg",11
+wait 300
+bg "img\fukkatu.jpg",11
+wait 300
+bg "img\sitai.jpg",11
+wait 300
+bg "img\fukkatu.jpg",11
+wait 2000
+
+*check
+!s40
+
+;■以下エンディングクレジット
+
+bgm "sound\h-haze.mp3"
+
+bg "img\end01.jpg",10
+wait 4500
+
+bg "img\end02.jpg",10
+wait 4500
+
+bg "img\end03.jpg",10
+wait 4500
+
+bg "img\end04.jpg",10
+wait 4500
+
+bg "img\end05.jpg",10
+wait 4500
+
+bg "img\end06.jpg",10
+wait 4500
+
+bg "img\end07.jpg",10
+wait 4500
+
+
+
+bg "img\end08.jpg",10
+
+wait 1000
+
+
+bgmfadeout 2000
+
+bg "img\black.bmp",12
+stop
+wait 2000
+
+
+
+br
+br
+br
+br
+br
+br
+　　　　　　　　スタッフルーム\
+
+wait 1000
+
+bgm "sound\bgml016.mp3"
+setwindow 8,16,23,16,26,26,0,2,20,1,1,#aaaaaa,0,0,639,479
+bg "img\staff.jpg",10
+
+このたびは、店じまいセールの２００６年冬コミ新作『逆転ひぐらし裁判～カレーなる逆転』をお買い上げありがとうございます。\
+
+０７ｔｈ　Ｅｘｐａｎｓｉｏｎ様のオリジナルのひぐらしという作品は、主に昭和５６年から昭和５８年ごろが舞台となっております。\
+この作品にもその時代の要素を若干取り入れてみました。\
+１つは『料理天国』。料理バラエティー番組のハシリですね。
+試食係の龍虎さんは元関取です。\
+『セーラー服と機関銃』。
+最近、長澤まさみ主演でリバイバルされましたね。
+昭和５６年末に公開された薬師丸ひろ子主演の角川映画です。\
+５８年には『時を駆ける少女』（主演：原田知世）なんて作品もありましたね。
+この作品も最近アニメ映画でリバイバルされました。
+そういえば、梨花ちゃんはある意味『時を駆ける少女』でもありますね。\
+昭和５６年から昭和５８年は遠いようでも、近年のリバイバルブームの中で、熱い時代としてクローズアップされているのかもしれません。\
+
+さて、今回初めての冬コミ当選ということで、
+「これじゃあ、メリークリスマスじゃなくて、メリークルシミマスだよー！」
+と、ベタなことを言いたくなるほどの地獄の進行を味わっております。\
+食事の準備に掛ける時間もあまりないので、レトルトカレーばかり食べております。\
+そのせいもあってか、こんなゲームに仕上がりました。
+皆さん、楽しんでいただけたでしょうか？\
+
+店じまいセールが本当に店じまいしないよう、これからもご贔屓にお願いいたしやすです。ぺこり。\
+
+ご意見・ご感想お待ちしています
+ＵＲＬ：ｈｔｔｐ：／／ｗｗｗ３．ａｌｐｈａ－ｎｅｔ．ｎｅ．ｊｐ／ｕｓｅｒｓ／ａｂｂｅｙ／ｍｉｓｅｊｉｍａｉ／
+メール：ｄｏｔｓｕｔｏｔｓｕｋｏｔｓｕ＿ｄａｉｏｕ＠ｙａｈｏｏ．ｃｏ．ｊｐ\
+
+では、また会えることを願ってます。ではでは～♪
+
+wait 3000
+
+bgmfadeout 2000
+
+bg "img\black.bmp",12
+stop
+wait 2000
+
+
+
+goto *start
+
+end
+
+*customsel
+skipoff
+btndef clear
+if %9==1 goto *title_select
+cselbtn 0,50,280,45
+cselbtn 1,51,380,45
+cselbtn 2,52,280,100
+cselbtn 3,53,380,100
+cselbtn 4,54,280,155
+cselbtn 5,55,380,155
+if %5==1 cselbtn 6,56,280,210
+if %5==1 cselbtn 7,57,380,210
+*csel_loop
+selectbtnwait %0
+if %0=-2 systemcall lookback:goto *csel_loop
+if %0=-1 gosub *rclk:goto *csel_st
+if %5==0 & %0>=50 & %0<=55 saveon:sub %0,50:cselgoto %0
+if %5==1 & %0>=50 & %0<=57 saveon:sub %0,50:cselgoto %0
+goto *csel_loop
+*title_select
+cselbtn 0,50,250,390
+*csel_loop2
+selectbtnwait %0
+if %0=-2 systemcall lookback:goto *csel_loop2
+;if %0=-1 gosub *rclk:goto *csel_st
+if %0==50 saveon:sub %0,50:cselgoto %0
+goto *csel_loop2
