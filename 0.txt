@@ -8,16 +8,19 @@ effect 11,10,200
 effect 12,10,3000
 effect 13,10,1000
 
-clickstr "」）。！？",2
+;clickstr "」）。！？",2
+clickstr "」）。！",2
 
-rmenu "セーブ",save,"ロード",load,"最初に戻る",reset
+;rmenu "セーブ",save,"ロード",load,"最初に戻る",reset
+rmenu "Save",save,"Load",load,"Back　to　title",reset
 ;rmenu "セーブ",save,"ロード",load,"回想",lookback,"終了する",reset
 ;savename "記憶する","記憶を呼び戻す","記憶の断片"
 
 game
 *start
 
-caption "店じまいセール"
+;caption "店じまいセール"
+caption "Ace Higurashi Attorney: The Curry Turnabout - English version by DoctorDiablo"
 
 setwindow 8,16,23,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 
@@ -53,7 +56,8 @@ bg "img\title2.jpg",12
 
 wait 2000
 mov %9,1
-csel "ゲーム開始",*title_next
+;csel "ゲーム開始",*title_next
+csel "Start　Game",*title_next
 *title_next
 mov %9,0
 stop
@@ -72,18 +76,22 @@ wait 2000
 
 bgm "sound\bgml010.mp3"
 
-「はぁ、はぁ、はぁ・・・」\
+;「はぁ、はぁ、はぁ・・・」\
+"Haah, haah, haah..."\
 
 bg "img\sitai.jpg",12
 
 ;（暗闇にスポットライトが当たっているかのように浮かび上がる
 ;カレー鍋を被って床に倒れている知恵先生）
 
-「なんで、こんなことに・・・」\
+;「なんで、こんなことに・・・」\
+"Why？　Why did it end up like this...？"\
 
-「あたしは悪くない、悪くない・・・」\
+;「あたしは悪くない、悪くない・・・」\
+"I didn't do anything wrong. I didn't..."\
 
-「どうにかこの場を切り抜けなければ・・・」\
+;「どうにかこの場を切り抜けなければ・・・」\
+"I have to get out of this, somehow..."\
 
 ;（暗転）
 
@@ -99,9 +107,11 @@ br
 br
 br
 br
-　　１２月ＸＸ日　月曜日　午前１０時００分
+;　　１２月ＸＸ日　月曜日　午前１０時００分
+　　　Monday, December XX, 10:00 AM
 br
-　　　　　　学級裁判所　第１法廷\
+;　　　　　　学級裁判所　第１法廷\
+　　　School courthouse, courtroom #1\
 
 
 bg "img\kizuti.jpg",10
@@ -115,35 +125,42 @@ wait 1000
 
 !s40
 ld c,":a;img\rika-normal.jpg",10
-「これより【被告人・前原圭一】の学級裁判を開廷します。」\
+;「これより【被告人・前原圭一】の学級裁判を開廷します。」\
+"The class trial for 'the defendant Keiichi Maebara' is now in session."\
 
 cl a,10
 
 ld r,":a;img\satoko2-horane.jpg",10
-「検察側、準備完了しているのですわ。」\
+;「検察側、準備完了しているのですわ。」\
+"The prosecution is ready, your honor."\
 
 ld l,":a;img\k2-komari.jpg",10
-「俺はやってない。やってないんだ！」\
+;「俺はやってない。やってないんだ！」\
+"I didn't do it. I didn't do it!"\
 
 bg "img\mado.jpg",10
 
 ld c,":a;img\rena-bikkuri.jpg",10
-「落ち着いて、圭一くん。弁護側準備完了しているんだよ。・・・だよ。」\
+;「落ち着いて、圭一くん。弁護側準備完了しているんだよ。・・・だよ。」\
+"Calm down, Keiichi-kun. The defense is ready. ...Ready."\
 
 bg "img\01.jpg",10
 wait 300
 
 ld c,":a;img\rika-warai.jpg",10
-「では、検察側冒頭陳述をおねがいします」
+;「では、検察側冒頭陳述をおねがいします」
+"Very well then. Prosecution, please proceed with your opening statement."
 \
 
 cl a,10
 
 ld r,":a;img\satoko2-shiryo.jpg",10
-「被告人・前原圭一さんは、知恵先生にぐつぐつに煮立ったカレー鍋を頭からかぶせて殺害しましたのですわ。それを立証してみせますわ。」\
+;「被告人・前原圭一さんは、知恵先生にぐつぐつに煮立ったカレー鍋を頭からかぶせて殺害しましたのですわ。それを立証してみせますわ。」\
+"The defendant, Keiichi Maebara, poured a pot of boiling hot curry over Chie-sensei's head, killing her. I will now proceed to prove this assertion."\
 
 ld r,":a;img\satoko2-normal.jpg",10
-「まずは先週の土曜日、事件当日の状況を時間を遡って説明しますわ。」\
+;「まずは先週の土曜日、事件当日の状況を時間を遡って説明しますわ。」\
+"To begin, let us go back to last Saturday and describe the day of the incident in detail."\
 
 wait 2000
 stop
@@ -160,34 +177,46 @@ bg "img\chourishitsu.jpg",10
 wait 2000
 
 ld l,":a;img\tie-futuu.jpg",10
-「はい、今日の調理実習はカレーです」\
+;「はい、今日の調理実習はカレーです」\
+"All right class, today's lesson is on making curry."\
 
 ld r,":a;img\mion-fukure.jpg",10
-「先生、『今日も』の間違いじゃないんですか？」\
+;「先生、『今日も』の間違いじゃないんですか？」\
+"Chie-sensei, did you mean to say 'again'？"\
 
 ld l,":a;img\tie-okori.jpg",10
-「いいえ、先週はスパイスをふんだんに使った骨付きチキン入りのインドカレー。」\
-「先々週は出汁の効いたネギ入りの和風カレー丼でしたよ。」\
-「まったく違うものじゃないですか。」\
-「今日は、牛肉・ジャガイモ・ニンジン・タマネギの入った洋風カレーを作りますよ。」\
+;「いいえ、先週はスパイスをふんだんに使った骨付きチキン入りのインドカレー。」\
+"No, last week's lesson was about making Indian style curry, the kind with chicken still on the bone and ample spices."\
+;「先々週は出汁の効いたネギ入りの和風カレー丼でしたよ。」\
+"And the week before that, it was Japanese style curry, made with dashi stock and scallions."\
+;「まったく違うものじゃないですか。」\
+"These are all completely different things, don't you see？"\
+;「今日は、牛肉・ジャガイモ・ニンジン・タマネギの入った洋風カレーを作りますよ。」\
+"Today, we will be cooking a western-style curry, made with beef, potatoes, carrots, and onions."\
 
 ld c,":a;img\k-niyari.jpg",10
-「先生にしてはずいぶんオーソドックスな作りのカレーですねぇ。」\
+;「先生にしてはずいぶんオーソドックスな作りのカレーですねぇ。」\
+"That seems like an especially orthodox curry for you, Chie-sensei."\
 
 ld l,":a;img\tie-tamaran.jpg",10
-「ふふふ、世の中、シンプルなものほど奥が深いものなのですよ。」\
-「とは言っても一工夫あります。今日は土曜日ですから２晩じっくり寝かせて月曜日に食べます。」\
+;「ふふふ、世の中、シンプルなものほど奥が深いものなのですよ。」\
+"Hehehe, in our world, the simplest things are the deepest."\
+;「とは言っても一工夫あります。今日は土曜日ですから２晩じっくり寝かせて月曜日に食べます。」\
+"Although, there is a twist. Today is Saturday, so we'll let it stew for two nights and then eat it on Monday."\
 
 ld c,":a;img\k-komari.jpg",10
-「えーっ！！今日は調理実習だから昼飯いらないって言ってきちゃったよ。」\
+;「えーっ！！今日は調理実習だから昼飯いらないって言ってきちゃったよ。」\
+"Wha？! But I told my parents we're having a cooking class today and I didn't need lunch."\
 ld c,":a;img\k-ku.jpg",10
-「今日は親居ないし・・・帰ったら、カップ麺くらいしかないだろーなー。」\
+;「今日は親居ないし・・・帰ったら、カップ麺くらいしかないだろーなー。」\
+"And my parents are gonna be out today... so when I get home, there won't be anything but cup noodles waiting for me."\
 
 cl r,10
 wait 300
 
 ld r,":a;img\rena-nande2.jpg",10
-「やっぱり豚骨ショウガ味・・・なのかな？・・・かな？」\
+;「やっぱり豚骨ショウガ味・・・なのかな？・・・かな？」\
+"I knew it... Pork and ginger flavor, right？ ...Right？"\
 
 wait 2000
 stop
@@ -203,79 +232,100 @@ bg "img\kaerimiti.jpg",10
 wait 2000
 
 ld l,":a;img\k-niyari.jpg",10
-「先生の凝り性も困ったものだなー。おかげで昼飯食べ損ねちゃったよ。」\
+;「先生の凝り性も困ったものだなー。おかげで昼飯食べ損ねちゃったよ。」\
+"Chie-sensei's obsessiveness can be such a bother. Thanks to that, I missed out on lunch."\
 
 ld c,":a;img\mion-akusho.jpg",10
-「そんなことで大丈夫かい？今日の部活は、興宮（おきのみや）スポーツセンターで興宮タイタンズとの異種球技戦だよ。」\
+;「そんなことで大丈夫かい？今日の部活は、興宮（おきのみや）スポーツセンターで興宮タイタンズとの異種球技戦だよ。」\
+"Sure you'll be okay like that？ Today's club activity is going to be mixed ball games with the Okinomiya Titans, at the Okinomiya Sports Center."\
 
 ld c,":a;img\mion-akusho2.jpg",10
-「向こうが９人で野球で挑んでくるから、こちらは５人でバスケで迎え撃つよ。」\
+;「向こうが９人で野球で挑んでくるから、こちらは５人でバスケで迎え撃つよ。」\
+"They challenged us to a 9-player baseball game, and then we'll counter them with a 5-player basketball game."\
 
 ld r,":a;img\rika2-warai.jpg",10
-「興宮タイタンズにはいいピッチャーがいるとのことですよ。」\
+;「興宮タイタンズにはいいピッチャーがいるとのことですよ。」\
+"The Okinomiya Titans have a really good pitcher."\
 
 cl l,10
 wait 300
 
 ld l,":a;img\satoko-akusho.jpg",10
-「相手にとって不足なしですわ。」\
+;「相手にとって不足なしですわ。」\
+"We have no shortage of strong opponents."\
 
 ld c,":a;img\mion-normal.jpg",10
-「調理実習が長引いたから開始時間も迫っているね。このまま直接、興宮スポーツセンターに向かうよ！」\
+;「調理実習が長引いたから開始時間も迫っているね。このまま直接、興宮スポーツセンターに向かうよ！」\
+"The cooking class dragged on really long, so it's almost time to start. We better head straight to the Okinomiya Sports Center!"\
 
 cl a,10
 wait 300
 
 ld c,":a;img\k-komari.jpg",10
-「あっ、忘れ物した。学校寄ってから行くんで、先に始めていてくれよ。」\
+;「あっ、忘れ物した。学校寄ってから行くんで、先に始めていてくれよ。」\
+"Oh... I forgot something. I'll head back to the school and then catch up. Go ahead and get started without me."\
 
 cl a,10
 wait 300
 
 ld c,":a;img\rena-bikkuri.jpg",10
-「えーっ！？５人そろわないとバスケのチーム編成が出来ないんだよ。・・・だよ。」\
+;「えーっ！？５人そろわないとバスケのチーム編成が出来ないんだよ。・・・だよ。」\
+"Huuuh？! We can't make a full basketball team without all five of us, you know？ ...You know？"\
 
 ld l,":a;img\k-niyari.jpg",10
-「４人なら、カーリングのチームを組んだらどうだ？最初はカーリングと戦っていたと思ったらいつの間にかバスケになっていたとしたら相手は驚くぞ。」\
+;「４人なら、カーリングのチームを組んだらどうだ？最初はカーリングと戦っていたと思ったらいつの間にかバスケになっていたとしたら相手は驚くぞ。」\
+"Then why don't the four of you form a curling team？　They'll be so surprised, thinking this was a curling duel, but all of a sudden you're playing basketball."\
 
 ld r,":a;img\rika2-normal.jpg",10
-「圭一、カーリングは玉を使うけど、球技かどうか微妙なのですよ。」\
+;「圭一、カーリングは玉を使うけど、球技かどうか微妙なのですよ。」\
+"Keiichi, curling does use something like a ball, but I'm not sure I'd classify it as a ball game."\
 ld r,":a;img\rika2-warai.jpg",10
-「玉じゃなくてボールを使うのはないですか？」\
+;「玉じゃなくてボールを使うのはないですか？」\
+"Isn't there anything that uses an actual ball？"\
 
 ld l,":a;img\k-warai.jpg",10
-「じゃあ、キンボールはどうだ？」\
+;「じゃあ、キンボールはどうだ？」\
+"Then what about Kin-Ball？"\
 
 cl c,10
 wait 300
 
 ld c,":a;img\satoko-normal.jpg",10
-「キンボールってなんですの？」\
+;「キンボールってなんですの？」\
+"Kin-Ball？ What's that？"\
 
 ld l,":a;img\k-niyari.jpg",10
-「知らないのか、沙都子。都会じゃ常識だぞ。」\
-「直径１２２センチ、重さ約１キロという巨大で派手なピンク色をしたボールを、サーブしたりレシーブしたりして、４人１チームで戦う球技だ。」\
-「空気で膨らませたボールを使用しているので、滞空時間が長く、打ち方によっては、ボールを曲げたり落としたりすることもでき、技術も奥深いんだぜ。 」\
+;「知らないのか、沙都子。都会じゃ常識だぞ。」\
+"Oh, you haven't heard of it, Satoko？ Everyone knows it back in the city."\
+;「直径１２２センチ、重さ約１キロという巨大で派手なピンク色をしたボールを、サーブしたりレシーブしたりして、４人１チームで戦う球技だ。」\
+"It's a ball game played with four players per team, where you serve and receive a massive, 122 cm, gaudy pink ball."\
+;「空気で膨らませたボールを使用しているので、滞空時間が長く、打ち方によっては、ボールを曲げたり落としたりすることもでき、技術も奥深いんだぜ。 」\
+"The ball is inflated with air, so it gets a lot of hangtime in midair. The ball can curve or drop depending on how you hit it, so there's some deep technique to it."\
 
 ld c,":a;img\satoko-akire.jpg",10
-「また圭一さん、マニアックなものを・・・」\
+;「また圭一さん、マニアックなものを・・・」\
+"Again with the sports maniac stuff, Keiichi...？"\
 
 ld r,":a;img\rika2-nipa.jpg",10
-「口からでまかせのようでいて、本当に実在するあたりが恐ろしいのですよ。」\
+;「口からでまかせのようでいて、本当に実在するあたりが恐ろしいのですよ。」\
+"It sounds like something he just made up on the spot, but the fact that it's actually real makes it all the more frightening."\
 
 cl c,10
 wait 300
 
 ld c,":a;img\mion-normal.jpg",10
-「直径１２２センチか・・・。それだけデカければ圭ちゃんが来るまで持ちこたえられそうだね。」\
+;「直径１２２センチか・・・。それだけデカければ圭ちゃんが来るまで持ちこたえられそうだね。」\
+"122 centimeters wide... If it's that huge, I think we'd be able to hold on to it until Kei-chan arrives."\
 ld c,":a;img\mion-normal2.jpg",10
-「キンボール採用！」\
+;「キンボール採用！」\
+"Kin-Ball it is, then!"\
 
 cl l,10
 wait 300
 
 ld l,":a;img\rena-hau.jpg",10
-「キンボール・・・。はぅ・・・」\
+;「キンボール・・・。はぅ・・・」\
+"Kin-Ball... Hauu..."\
 ld l,":a;img\rena-hau2.jpg",10
 
 wait 2000
@@ -295,14 +345,18 @@ wait 500
 
 ld l,":a;img\k2-komarimae.jpg",10
 ld r,":a;img\satoko2-udegumi.jpg",10
-「・・・と、このように、その日、圭一さんは学校に戻っています。」\
+;「・・・と、このように、その日、圭一さんは学校に戻っています。」\
+"...And thus, Keiichi-san returned to the school building that day."\
 
 ld r,":a;img\satoko2-shiryo.jpg",10
-「その日、営林署も半ドンでしたので、営林署の人も学校が終わってまもなく帰ったのですが・・・」\
-「そのとき学校に残っていたのは、知恵先生と圭一さんだけだったと証言しています。」\
+;「その日、営林署も半ドンでしたので、営林署の人も学校が終わってまもなく帰ったのですが・・・」\
+"The forestry office also closed early that day, so the forestry staff went home shortly after school ended..."\
+;「そのとき学校に残っていたのは、知恵先生と圭一さんだけだったと証言しています。」\
+"Their testimony indicates that no one but Chie-sensei and Keiichi-san were still at school at the time."\
 
 ld r,":a;img\satoko2-ban.jpg",10
-「その証言を証拠として提出いたしますわ。」\
+;「その証言を証拠として提出いたしますわ。」\
+"I will now submit that testimony as evidence."\
 
 ;（証拠３：営林署員の証言）
 
@@ -310,7 +364,8 @@ bg "img\mado.jpg",10
 wait 300
 
 ld c,":a;img\rena-choiwara.jpg",10
-「圭一くん。証拠は『証拠を確認する』内容を確認できるんだよ。・・・だよ。」
+;「圭一くん。証拠は『証拠を確認する』内容を確認できるんだよ。・・・だよ。」
+"Keiichi-kun, you can use 'Check Evidence' to confirm the contents of evidence. ...Evidence."
 
 ;（見ると、先ほどの証拠のほかに、
 ;証拠１：知恵の死亡診断書、
@@ -318,39 +373,54 @@ ld c,":a;img\rena-choiwara.jpg",10
 
 *modoru
 br
-select "証拠を確認する",*shoko,"先に進む",*susumu
+;select "証拠を確認する",*shoko,"先に進む",*susumu
+select "Check　Evidence",*shoko,"Continue",*susumu
 
 *shoko
 
-選択してください
+;選択してください
+　Please make a selection
 br
-select "証拠１：知恵の死亡診断書",*sindan,"証拠２：カレー（凶器）",*kyoki,"証拠３：営林署員の証言",*shogen,"戻る",*modoru
+;select "証拠１：知恵の死亡診断書",*sindan,"証拠２：カレー（凶器）",*kyoki,"証拠３：営林署員の証言",*shogen,"戻る",*modoru
+select "Evidence1：　Chie's　Autopsy　Report",*sindan,"Evidence2：　Curry　（Murder　Weapon）",*kyoki,"Evidence3：　Forestry　Officer's　Testimony",*shogen,"Go　Back",*modoru
 
 *sindan
-知恵の死亡診断書@
+;知恵の死亡診断書@
+　Chie's autopsy report.@
 br
-知恵先生は、中身の入ったカレー鍋を被って硬直していた。@
-死亡日時は不明。@
+;知恵先生は、中身の入ったカレー鍋を被って硬直していた。@
+　Chie-sensei was found stiff and covered in the contents of the curry pot.@
+;死亡日時は不明。@
+　The time of death is unknown.@
 br
-保健委員　富田大樹\
+;保健委員　富田大樹\
+　- Student Health Officer, Daiki Tomita\
 
 goto *shoko
 
 *kyoki
-カレー@
+;カレー@
+　Curry.@
 br
-本事件の凶器となったカレー。@
-直径６０ｃｍ深さ３０ｃｍ程度の銅製の鍋に入っていた。@
-状態から、鍋ごと勢い良く被せられたと考えられる。\
+;本事件の凶器となったカレー。@
+　The murder weapon of this incident.@
+;直径６０ｃｍ深さ３０ｃｍ程度の銅製の鍋に入っていた。@
+　Was inside a copper cooking pot, roughly 60cm in diameter and 30cm deep.@
+;状態から、鍋ごと勢い良く被せられたと考えられる。\
+　Based on the state of the scene, it is believed that the entire pot was vigorously poured on her.\
 
 goto *shoko
 
 *shogen
-営林署員の証言@
+;営林署員の証言@
+　Forestry officer's testimony.@
 br
-土曜の放課後、１２時半ごろ、私は帰宅しました。@
-学校には私の他には、知恵先生と前原君だけがいました。@
-２人は、『カレー食べさせてくれよー』、『だめです』といった内容の押し問答をしていました。\
+;土曜の放課後、１２時半ごろ、私は帰宅しました。@
+　I went home after school ended on Saturday, around 12:30.@
+;学校には私の他には、知恵先生と前原君だけがいました。@
+　Aside from me, nobody but Chie-sensei and Maebara-kun were at the school building.@
+;２人は、『カレー食べさせてくれよー』、『だめです』といった内容の押し問答をしていました。\
+　The two of them were engaged in an argument, saying things like 'Let me eat the curry!' and 'You can't!'\
 
 goto *shoko
 
@@ -360,20 +430,25 @@ bg "img\01.jpg",10
 wait 300
 
 ld c,":a;img\rika-normal.jpg",10
-「証言によると、『カレー食べさせてくれよー』、『だめです』の押し問答をしていたとのことですが。」\
+;「証言によると、『カレー食べさせてくれよー』、『だめです』の押し問答をしていたとのことですが。」\
+"According to witness testimony, there was an argument where things like 'Let me eat the curry!' and 'You can't!' were said."\
 
 ld r,":a;img\satoko2-udegumi.jpg",10
-「はい。検察側ではそれが殺害の動機とみているのですわ。」\
+;「はい。検察側ではそれが殺害の動機とみているのですわ。」\
+"Indeed. The prosecution believes that was the killer's motive."\
 
 ld c,":a;img\rika-nipa.jpg",10
-「食べ物の恨みということですね。では弁護側、反論をどうぞなのですよ。」\
+;「食べ物の恨みということですね。では弁護側、反論をどうぞなのですよ。」\
+"Resentment over the food situation. So, defense, care to respond？"\
 
 bg "img\mado.jpg",10
 wait 300
 
 ld c,":a;img\rena-komari.jpg",10
-「圭一くん。検察側の立証に何かあやふやな部分はないかな？・・・かな？」\
-「なにか、あったら選んで突きつけて欲しいんだよ。・・・だよ。」\
+;「圭一くん。検察側の立証に何かあやふやな部分はないかな？・・・かな？」\
+"Keiichi-kun, is there anything flimsy in the prosecution's argument？ ...Argument？"\
+;「なにか、あったら選んで突きつけて欲しいんだよ。・・・だよ。」\
+"If there is, I'd like you to choose it and then present it. Present it."\
 
 stop
 
@@ -383,24 +458,31 @@ bgm "sound\bgm0042_SFX.mp3"
 mov %5,0
 
 br
-知恵の死亡診断書
+;知恵の死亡診断書
 br
-カレー
+;カレー
 br
-営林署員の証言
+;営林署員の証言
 
-csel "読む",*s1,"突きつける",*s2,
-"読む",*s3,"突きつける",*s4,
-"読む",*s5,"突きつける",*s6
+;csel "読む",*s1,"突きつける",*s2,
+;"読む",*s3,"突きつける",*s4,
+;"読む",*s5,"突きつける",*s6
+csel "Read'Autopsy　Rpt.'",*s1,"Present'Autopsy　Rpt.'",*s2,
+"Read'Curry'",*s3,"Present'Curry'",*s4,
+"Read'Testimony'",*s5,"Present'Testimony'",*s6
 
 
 *s1
-知恵の死亡診断書@
+;知恵の死亡診断書@
+　Chie's autopsy report.@
 br
-知恵先生は、中身の入ったカレー鍋を被って硬直していた。@
-死亡日時は不明。@
+;知恵先生は、中身の入ったカレー鍋を被って硬直していた。\
+　Chie-sensei was found stiff and covered in the contents of the curry pot.@
+;死亡日時は不明。@
+　The time of death is unknown.@
 br
-保健委員　富田大樹\
+;保健委員　富田大樹\
+　- Student Health Officer, Daiki Tomita\
 
 goto *sentakushi
 
@@ -409,38 +491,52 @@ goto *sentakushi
 goto *sentakushi_nuke
 
 *s3
-カレー@
+;カレー@
+　Curry.@
 br
-本事件の凶器となったカレー。@
-直径６０ｃｍ深さ３０ｃｍ程度の銅製の鍋に入っていた。@
-状態から、鍋ごと勢い良く被せられたと考えられる。\
+;本事件の凶器となったカレー。@
+　The murder weapon of this incident.@
+;直径６０ｃｍ深さ３０ｃｍ程度の銅製の鍋に入っていた。@
+　Was inside a copper cooking pot, roughly 60cm in diameter and 30cm deep.@
+;状態から、鍋ごと勢い良く被せられたと考えられる。\
+　Based on the state of the scene, it is believed that the entire pot was vigorously poured on her.\
 
 goto *sentakushi
 
 *s4
 ld c,":a;img\rena-nande.jpg",10
-「どうかな？・・・どうかな？」\
-「それが一番、おかしいかな？」\
-「レナにはもっと気になる点があるんだよ。・・・だよ」\
+;「どうかな？・・・どうかな？」\
+"Really？ ...Really？"\
+;「それが一番、おかしいかな？」\
+"You think that's the most suspicious？"\
+;「レナにはもっと気になる点があるんだよ。・・・だよ」\
+"There was something else Rena was more concerned about. ...About."\
 ld c,":a;img\rena-komari.jpg",10
 
 goto *sentakushi
 
 *s5
-営林署員の証言@
+;営林署員の証言@
+　Forestry officer's testimony.@
 br
-土曜の放課後、１２時半ごろ、私は帰宅しました。@
-学校には私の他には、知恵先生と前原君だけがいました。@
-２人は、『カレー食べさせてくれよー』、『だめです』といった内容の押し問答をしていました。\
+;土曜の放課後、１２時半ごろ、私は帰宅しました。@
+　I went home after school ended on Saturday, around 12:30.@
+;学校には私の他には、知恵先生と前原君だけがいました。@
+　Aside from myself, nobody but Chie-sensei and Maebara-kun were at the school building.@
+;２人は、『カレー食べさせてくれよー』、『だめです』といった内容の押し問答をしていました。\
+　The two of them were engaged in an argument, saying things like 'Let me eat the curry!' and 'You can't!'\
 
 
 goto *sentakushi
 
 *s6
 ld c,":a;img\rena-nande.jpg",10
-「どうかな？・・・どうかな？」\
-「それが一番、おかしいかな？」\
-「レナにはもっと気になる点があるんだよ。・・・だよ」\
+;「どうかな？・・・どうかな？」\
+"Really？ ...Really？"\
+;「それが一番、おかしいかな？」\
+"You think that's the most suspicious？"\
+;「レナにはもっと気になる点があるんだよ。・・・だよ」\
+"There was something else Rena was more concerned about. ...About."\
 ld c,":a;img\rena-komari.jpg",10
 
 goto *sentakushi
@@ -455,7 +551,8 @@ bgm "sound\fang.mp3"
 ;（ビシッ！！←突きつける効果音）
 
 ld c,":a;img\rena-warai.jpg",10
-「そうだね。レナもそれがひっかかっていたんだよ。・・・だよ。」\
+;「そうだね。レナもそれがひっかかっていたんだよ。・・・だよ。」\
+"That's right. Rena was wondering about that, too. ...Too."\
 
 bg "img\01.jpg",10
 wait 300
@@ -463,19 +560,24 @@ wait 300
 ld r,":a;img\satoko2-udegumi.jpg",10
 wait 300
 ld l,":a;img\rena-normal.jpg",10
-「知恵先生の死亡診断書には、死亡推定時刻は不明とあります。」\
+;「知恵先生の死亡診断書には、死亡推定時刻は不明とあります。」\
+"According to Chie-sensei's autopsy report, the approximate time of death is still unknown."\
 ld l,":a;img\rena-normal2.jpg",10
-「知恵先生はだいたい一番早く学校に来ますから、事件は月曜の朝だったという可能性もあるんじゃないかな？・・・かな？」\
+;「知恵先生はだいたい一番早く学校に来ますから、事件は月曜の朝だったという可能性もあるんじゃないかな？・・・かな？」\
+"Chie-sensei is generally the first person to arrive at school, so isn't it possible the incident actually occurred Monday morning？ ...Morning？"\
 ld l,":a;img\rena-normal.jpg",10
-「今日の朝、知恵先生が発見された状況を聞かせてほしいかな？・・・かな？」\
+;「今日の朝、知恵先生が発見された状況を聞かせてほしいかな？・・・かな？」\
+"We'd like to hear about the details about how Chie-sensei was discovered this morning, if you don't mind？ ...Mind？"\
 
 ld r,":a;img\satoko2-giku.jpg",10
-「くっ、粘りますわね。裁判長、【第一発見者・園崎魅音】さんの証言に許可をお願いします。」\
+;「くっ、粘りますわね。裁判長、【第一発見者・園崎魅音】さんの証言に許可をお願いします。」\
+"Tch, so persistent. You honor, please allow 'the first to discover the body,' Mion Sonozaki-san, to testify."\
 
 cl a,10
 
 ld c,":a;img\rika-nipa.jpg",10
-「証言を許可します。」\
+;「証言を許可します。」\
+"Permission granted."\
 
 cl a,10 
 
@@ -484,16 +586,19 @@ ld c,":a;img\mion-normal.jpg",10
 wait 300
 
 ld r,":a;img\satoko2-shiryo.jpg",10
-「証人さん、名前と職業をお願いしますわ。」\
+;「証人さん、名前と職業をお願いしますわ。」\
+"Witness, name and occupation, please."\
 
 ld c,":a;img\mion-futeki.jpg",10
-「園崎魅音。このクラスのクラス委員長をしてるよ。」\
+;「園崎魅音。このクラスのクラス委員長をしてるよ。」\
+"Mion Sonozaki. I'm the class president at this school."\
 
 cl a,10
 wait 300
 
 ld c,":a;img\rika-nipa.jpg",10
-「では、魅ぃが知恵を発見したときの状況について証言して欲しいのですよ。」\
+;「では、魅ぃが知恵を発見したときの状況について証言して欲しいのですよ。」\
+"All right Mii, we'd like you to testify about the situation when you discovered Chie."\
 
 cl a,10
 
@@ -507,19 +612,23 @@ wait 500
 ;■第一発見者：魅音の証言
 
 ld c,":a;img\mion-normal.jpg",10
-「おじさん、今日は朝早く学校に来てみたんだけど・・・」\
+;「おじさん、今日は朝早く学校に来てみたんだけど・・・」\
+"This ol' man came to school early this morning, but..."\
 ;①
 
 ld c,":a;img\mion-fukure.jpg",10
-「職員室に知恵先生がいなかったんだよ。」\
+;「職員室に知恵先生がいなかったんだよ。」\
+"Chie-sensei wasn't in the staff room."\
 ;②
 
 ld c,":a;img\mion-akusho.jpg",10
-「学校内を探してみると、調理実習につかっていた部屋に知恵先生がカレー鍋を被って倒れていたんだよ。」\
+;「学校内を探してみると、調理実習につかっていた部屋に知恵先生がカレー鍋を被って倒れていたんだよ。」\
+"I searched the school and found her in the room where we held the cooking class, laying on the ground and covered in a curry pot."\
 ;③
 
 ld c,":a;img\mion-futeki.jpg",10
-「先生は既に死んでいたので、現場をそのままにして人を呼びに行ったってわけさ。」\
+;「先生は既に死んでいたので、現場をそのままにして人を呼びに行ったってわけさ。」\
+"Chie was already dead, so I left the scene as-is and went to call for help."\
 ;④
 
 wait 100
@@ -527,20 +636,24 @@ bg "img\01.jpg",10
 wait 100
 
 ld c,":a;img\rika-normal.jpg",10
-「では尋問をどうぞ。」\
+;「では尋問をどうぞ。」\
+"Now, commence cross examination."\
 
 
 ld l,":a;img\k2-agoyubi.jpg",10
-（尋問？）\
+;（尋問？）\
+（Cross examination？）\
 
 wait 500
 bg "img\mado.jpg",10
 wait 500
 
 ld c,":a;img\rena-normal.jpg",10
-「圭一くん、尋問っていうのは、証言者に質問をして証言におかしなトコがないかチェックすることだよ。」\
+;「圭一くん、尋問っていうのは、証言者に質問をして証言におかしなトコがないかチェックすることだよ。」\
+"Keiichi-kun, cross examination is when you question the witness to check if there's anything odd about their testimony."\
 ld c,":a;img\rena-choiwara2.jpg",10
-「まずは発言に揺さぶりをかけると良いと思うんだよ。・・・だよ。」\
+;「まずは発言に揺さぶりをかけると良いと思うんだよ。・・・だよ。」\
+"I think a good first step is to press the witness about their statements. ...Statements."\
 
 wait 500
 bg "img\02.jpg",10
@@ -551,43 +664,53 @@ wait 500
 ;■尋問
 
 ld c,":a;img\mion-normal.jpg",10
-「おじさん、今日は朝早く学校に来てみたんだけど・・・」@
+;「おじさん、今日は朝早く学校に来てみたんだけど・・・」@
+"This ol' man came to school early this morning, but..."@
 ;①
 
-select "次へ",*next1,"揺さぶる",*igi1
+;select "次へ",*next1,"揺さぶる",*igi1
+select "Next",*next1,"Press",*igi1
 
 *next1
 
 ld c,":a;img\mion-fukure.jpg",10
-「職員室に知恵先生がいなかったんだよ。」@
+;「職員室に知恵先生がいなかったんだよ。」@
+"Chie-sensei wasn't in the staff room."@
 ;②
 
-select "次へ",*next2,"揺さぶる",*igi2
+;select "次へ",*next2,"揺さぶる",*igi2
+select "Next",*next2,"Press",*igi2
 
 *next2
 
 ld c,":a;img\mion-akusho.jpg",10
-「学校内を探してみると、調理実習につかっていた部屋に知恵先生がカレー鍋を被って倒れていたんだよ。」@
+;「学校内を探してみると、調理実習につかっていた部屋に知恵先生がカレー鍋を被って倒れていたんだよ。」@
+"I searched the school and found her in the room where we held the cooking class, laying on the ground and covered in a curry pot."@
 ;③
 
-select "次へ",*next3,"揺さぶる",*igi3
+;select "次へ",*next3,"揺さぶる",*igi3
+select "Next",*next3,"Press",*igi3
 
 *next3
 
 ld c,":a;img\mion-futeki.jpg",10
-「先生は既に死んでいたので、現場をそのままにして人を呼びに行ったってわけさ。」@
+;「先生は既に死んでいたので、現場をそのままにして人を呼びに行ったってわけさ。」@
+"Chie was already dead, so I left the scene as-is and went to call for help."@
 ;④
 
-select "次へ",*next4,"揺さぶる",*igi4
+;select "次へ",*next4,"揺さぶる",*igi4
+select "Next",*next4,"Press",*igi4
 
 *next4
 
 bg "img\black.bmp",10
 bg "img\mado.jpg",10
 ld c,":a;img\rena-choiwara.jpg",10
-「証言はここまでなんだよ。・・・だよ。」\
+;「証言はここまでなんだよ。・・・だよ。」\
+"That's all the testimony we'll get. ...Get."\
 ld c,":a;img\rena-choiwara2.jpg",10
-「魅ぃちゃんの発言にどこかおかしなところはなかったかな？・・・かな？」\
+;「魅ぃちゃんの発言にどこかおかしなところはなかったかな？・・・かな？」\
+"Did you notice anything odd in Mii-chan's statements？ ...Statements？"\
 
 bg "img\black.bmp",10
 bg "img\02.jpg",10
@@ -597,17 +720,21 @@ goto *mionshogen
 
 *igi1
 
-どの点を突きますか
-select "１．おじさん",*ojisan,"２．時刻",*jikoku,"３．朝早く来た理由",*riyuu,"次の証言へ進む",*next1
+;どの点を突きますか
+Press on which point？
+;select "１．おじさん",*ojisan,"２．時刻",*jikoku,"３．朝早く来た理由",*riyuu,"次の証言へ進む",*next1
+select "1.　This　ol'　man",*ojisan,"2.　The　time",*jikoku,"3.　Reason　for　coming　early",*riyuu,"Continue　with　testimony",*next1
 
 *ojisan
 
 bg "img\01.jpg",10
 
 ld l,":a;img\k2-ban.jpg",10
-「おじさん？証言者は女性に見えますが・・・」\
+;「おじさん？証言者は女性に見えますが・・・」\
+"'This old man'？ But witness, you appear to be a woman to me..."\
 ld r,":a;img\rena-bikkuri.jpg",10
-「圭一くん、今はそんなことに拘っているときじゃないと思うんだよ。・・・だよ。」\
+;「圭一くん、今はそんなことに拘っているときじゃないと思うんだよ。・・・だよ。」\
+"Keiichi-kun, I think this isn't the time to be asking about that. ...That."\
 
 bg "img\02.jpg",10
 
@@ -618,11 +745,14 @@ goto *next1
 bg "img\01.jpg",10
 
 ld l,":a;img\k2-ban.jpg",10
-「朝早くとは何時ですか？」\
+;「朝早くとは何時ですか？」\
+"Early in the morning you say, but what time specifically？"\
 ld r,":a;img\mion-wink.jpg",10
-「８時ちょっと前、７時５０分ごろだったと思うよ。」\
+;「８時ちょっと前、７時５０分ごろだったと思うよ。」\
+"A little before 8. I think it was around 7:50."\
 ld c,":a;img\rena-bikkuri.jpg",10
-「うわぁ、普段の魅ぃちゃんじゃ考えられない早さなんだよ。・・・だよ。」\
+;「うわぁ、普段の魅ぃちゃんじゃ考えられない早さなんだよ。・・・だよ。」\
+"Whoa, for Mii-chan that would normally be impossibly early. ...Early."\
 bg "img\02.jpg",10
 goto *next1
 
@@ -631,11 +761,14 @@ goto *next1
 mov %5,1
 bg "img\01.jpg",10
 ld l,":a;img\k2-ban.jpg",10
-「なぜその日は早く行ったんですか？普段は俺たちと待ち合わせて行くのに・・・。」\
+;「なぜその日は早く行ったんですか？普段は俺たちと待ち合わせて行くのに・・・。」\
+"Why did you head in so early that day？　Normally, you meet up with us and we go together..."\
 ld r,":a;img\mion-odoroki.jpg",10
-「うっ・・・。」\
+;「うっ・・・。」\
+"Ugh..."\
 ld r,":a;img\mion-futeki.jpg",10
-「まあなんていうかね、なんとなくだよ。朝早く目が覚めてしまったのに、することもないので学校に来てみたって訳さ。」\
+;「まあなんていうかね、なんとなくだよ。朝早く目が覚めてしまったのに、することもないので学校に来てみたって訳さ。」\
+"Well, no reason in particular, it just sort of happened. I woke up early that morning and had nothing better to do, so I just headed to school."\
 bg "img\02.jpg",10
 goto *next1
 
@@ -643,11 +776,14 @@ goto *next1
 *igi2
 bg "img\01.jpg",10
 ld l,":a;img\k2-ban.jpg",10
-「証言者は朝早く来たのだから、知恵先生が居なくても不思議じゃないのでは？」\
+;「証言者は朝早く来たのだから、知恵先生が居なくても不思議じゃないのでは？」\
+"The witness came early in the morning, so wouldn't it be normal to think Chie-sensei just wasn't there yet？"\
 ld r,":a;img\mion-akusho2.jpg",10
-「だって、知恵先生って来るのが無茶苦茶早いって噂じゃん。」\
+;「だって、知恵先生って来るのが無茶苦茶早いって噂じゃん。」\
+"But rumor is, Chie-sensei always comes in super early."\
 ld r,":a;img\mion-akusho.jpg",10
-「知恵先生がこの学校に赴任以来、知恵先生より先に登校できた人は居ないっていう話だよ。」\
+;「知恵先生がこの学校に赴任以来、知恵先生より先に登校できた人は居ないっていう話だよ。」\
+"They say that since she first started teaching here, nobody has ever managed to arrive earlier than her."\
 bg "img\02.jpg",10
 goto *next2
 
@@ -657,7 +793,8 @@ goto *next2
 if %5 == 1 goto *bunki_A
 bg "img\01.jpg",10
 ld c,":a;img\k2-agoyubi.jpg",10
-（この証言、何かひっかかるんだが・・・。）\
+;（この証言、何かひっかかるんだが・・・。）\
+（There's something bugging me about this testimony, but what...？）\
 bg "img\02.jpg",10
 goto *next3
 
@@ -666,16 +803,21 @@ goto *next3
 mov %6,1
 bg "img\01.jpg",10
 ld l,":a;img\rena-normal.jpg",10
-「魅ぃちゃんは、わざわざ探すほど知恵先生に会いたがっていた。」\
+;「魅ぃちゃんは、わざわざ探すほど知恵先生に会いたがっていた。」\
+"Mii-chan wanted to see Chie-sensei so badly she went out of her way to look for her."\
 ld l,":a;img\rena-komari.jpg",10
-「たまたま朝早く起きて、なんとなく学校に行ったというのに。」\
+;「たまたま朝早く起きて、なんとなく学校に行ったというのに。」\
+"Even though she just happened to wake up early and head to school？"\
 ld l,":a;img\rena-komari2.jpg",10
-「どうしてなのかな？・・・かな？」\
+;「どうしてなのかな？・・・かな？」\
+"I wonder why？ ...Why？"\
 
 ld r,":a;img\mion-yowari.jpg",10
-「え、ええっと。朝の挨拶は人生の基本というか、なんというか・・・。」\
+;「え、ええっと。朝の挨拶は人生の基本というか、なんというか・・・。」\
+"Umm, uhh. They say that morning greetings are the cornerstone of human life, or something..."\
 ld r,":a;img\mion-futeki.jpg",10
-「ああっ、そうそう。もしかして『朝、知恵先生より先に来るのは不可能だ』という伝説を打ち破ったのかもって思って探したんだよ。」\
+;「ああっ、そうそう。もしかして『朝、知恵先生より先に来るのは不可能だ』という伝説を打ち破ったのかもって思って探したんだよ。」\
+"Oh right, that's it. I was looking for her because I wanted to see if it was possible to disprove the legend that you can't get in before her in the morning."\
 bg "img\02.jpg",10
 if %5 == 1 & %6 == 1 & %7 == 1 goto *flag
 goto *next3
@@ -685,39 +827,50 @@ goto *next3
 *igi4
 bg "img\01.jpg",10
 ld l,":a;img\k2-ban.jpg",10
-「証言者はなぜ知恵先生が死んでいると判断したのですか？」\
+;「証言者はなぜ知恵先生が死んでいると判断したのですか？」\
+"Witness, what led you to decide that Chie-sensei was already dead？"\
 
 ld r,":a;img\mion-yowari.jpg",10
-「そりゃ、ピクリとも動かなかったし、煮えたぎったカレー鍋をかぶって生きている可能性はないかと・・・。」\
+;「そりゃ、ピクリとも動かなかったし、煮えたぎったカレー鍋をかぶって生きている可能性はないかと・・・。」\
+"Well, because her body wasn't moving at all. And there's no way you'd survive having a boiling pot of curry dumped on your head..."\
 
-select "次の発言へ移る",*next4,"更に揺さぶる",*igi6
+;select "次の発言へ移る",*next4,"更に揺さぶる",*igi6
+select "Continue　to　next　statement",*next4,"Press　further",*igi6
 
 
 *igi6
 mov %7,1
 cl a,10
 ld l,":a;img\k2-agoyubi.jpg",10
-「煮えたぎった？」\
+;「煮えたぎった？」\
+"Boiling？"\
 ld l,":a;img\k2-ban.jpg",10
-「証言者が登校した時点では、カレーはまだ熱かったのですか！？」\
+;「証言者が登校した時点では、カレーはまだ熱かったのですか！？」\
+"Witness, you're telling us the curry was still hot when you arrived at school？"\
 
 ld r,":a;img\satoko2-igi.jpg",10
-「異議あり！」\
+;「異議あり！」\
+"Objection!"\
 
 ld r,":a;img\satoko2-ban.jpg",10
-「その質問は本件と関係ないと思うのですわ。」\
+;「その質問は本件と関係ないと思うのですわ。」\
+"I believe that question has no relevance to this case."\
 
 ld l,":a;img\k2-shiryo.jpg",10
-「いいや、関係大有りだよ。朝の時点でカレーが熱かったなら、犯行は今日、月曜の朝に行われたことになる。」\
+;「いいや、関係大有りだよ。朝の時点でカレーが熱かったなら、犯行は今日、月曜の朝に行われたことになる。」\
+"No, it's very relevant. If the curry was still hot in the morning, then the crime must have occurred early Monday."\
 
 cl a,10
 ld c,":a;img\mion-odoroki.jpg",10
-「ええっと、その・・・。熱くはなかったのかな。今、考えてみると。」\
+;「ええっと、その・・・。熱くはなかったのかな。今、考えてみると。」\
+"Umm, well... Thinking back on it now, maybe it wasn't hot."\
 ld c,":a;img\mion-odoroki2.jpg",10
-「熱かったら、もっと匂いがするはずだから。カレー鍋は熱いものっていう先入観があって、ええっと・・・」\
+;「熱かったら、もっと匂いがするはずだから。カレー鍋は熱いものっていう先入観があって、ええっと・・・」\
+"It should've had a stronger smell if it was hot. I just had a preconceived notion that curry pots are always hot, and umm..."\
 
 ld r,":a;img\satoko2-horane.jpg",10
-「そうですわ。状況にビックリしって判断を誤るってことはよくあることですわ。」\
+;「そうですわ。状況にビックリしって判断を誤るってことはよくあることですわ。」\
+"Indeed. It's very common for people to be shocked by a situation like this and misjudge things in the moment."\
 
 cl a,10
 if %5 == 1 & %6 == 1 & %7 == 1 goto *flag
@@ -730,10 +883,12 @@ goto *next4
 bg "img\01.jpg",10
 
 ld l,":a;img\rena-choiwara.jpg",10
-「弁護側はここで作戦タイムを要求するんだよ。・・・だよ。」\
+;「弁護側はここで作戦タイムを要求するんだよ。・・・だよ。」\
+"The defense would like to request time to discuss our strategy. ...Strategy."\
 
 ld c,":a;img\rika-nipa.jpg",10
-「了解なのです。では、一旦休憩にして１５分後に再開にするのですよ。」\
+;「了解なのです。では、一旦休憩にして１５分後に再開にするのですよ。」\
+"Understood. Then, let us take a recess and resume in 15 minutes."\
 
 stop
 
@@ -753,9 +908,11 @@ br
 br
 br
 br
-　　１２月ＸＸ日　月曜日　午前１０時４５分
+;　　１２月ＸＸ日　月曜日　午前１０時４５分
+　　　Monday, December XX, 10:45 AM
 br
-　　　　学級裁判所　被告人第１控え室\
+;　　　　学級裁判所　被告人第１控え室\
+　School courthouse, defendant lobby #1\
 
 wait 2000
 bgm "sound\tamflash1.mp3"
@@ -765,25 +922,32 @@ wait 1000
 !s40
 
 ld r,":a;img\rena-bikkuri2.jpg",10
-「圭一君、なんか魅ぃちゃんの言っていることは変だね。・・・だね。」\
+;「圭一君、なんか魅ぃちゃんの言っていることは変だね。・・・だね。」\
+"Keiichi-kun, there's something odd about what Mii-chan has been saying. ...Saying."\
 
 ld l,":a;img\k-normal.jpg",10
-「あの魅音が、朝早く登校するってだけでも変だし・・・」\
+;「あの魅音が、朝早く登校するってだけでも変だし・・・」\
+"There's something weird about Mion going to school so early in the morning..."\
 
 ld r,":a;img\rena-komari.jpg",10
-「なんとなく来たという割りには、知恵先生を探していたり・・・」\
+;「なんとなく来たという割りには、知恵先生を探していたり・・・」\
+"Not just that she happened to come in, but she was looking for Chie-sensei too..."\
 
 ld l,":a;img\k-ku.jpg",10
-「先生がかぶっていたカレーは既に冷めていたのに、熱いカレーを被ったと判断している。」\
+;「先生がかぶっていたカレーは既に冷めていたのに、熱いカレーを被ったと判断している。」\
+"The curry she was covered in should've already gotten cold, but she concluded that it was still hot."\
 
 ld r,":a;img\rena-nande.jpg",10
-「そうだね、普通ハッキリとした情報がないのなら、どんな絶望的な状況でも生きている可能性を信じたくなるもの。なのに始めっから死んでいると断定してる・・・。」\
+;「そうだね、普通ハッキリとした情報がないのなら、どんな絶望的な状況でも生きている可能性を信じたくなるもの。なのに始めっから死んでいると断定してる・・・。」\
+"Right, usually in the absence of clear information, you'd be inclined to believe in the possibility that someone is still alive, no matter how hopeless the situation. And yet, she wrote her off as dead right from the start..."\
 
 ld l,":a;img\k-normal.jpg",10
-「先生がこうなっていることを知っていて、居ても立ってもいられず早く来たっていう線が強そうだ。」\
+;「先生がこうなっていることを知っていて、居ても立ってもいられず早く来たっていう線が強そうだ。」\
+"It seems more like she already knew what happened to Chie-sensei, and came early because she was feeling restless about it."\
 
 ld r,":a;img\rena-normal2.jpg",10
-「そうだね、その線で反撃してみるんだよ。・・・だよ。」\
+;「そうだね、その線で反撃してみるんだよ。・・・だよ。」\
+"Indeed, we should fight back from that line on reasoning. ...Reasoning."\
 
 wait 1200
 stop
@@ -797,9 +961,11 @@ br
 br
 br
 br
-　　１２月ＸＸ日　月曜日　午前１１時００分
+;　　１２月ＸＸ日　月曜日　午前１１時００分
+　　　Monday, December XX, 10:45 AM
 br
-　　　　　　学級裁判所　第１法廷\
+;　　　　　　学級裁判所　第１法廷\
+　　　School courthouse, courtroom #1\
 
 bg "img\kizuti.jpg",10
 wave "sound\wood05.wav"
@@ -812,22 +978,27 @@ wait 1000
 !s40
 
 ld c,":a;img\rika-nipa.jpg",10
-「では、再開するのですよ。」\
+;「では、再開するのですよ。」\
+"Now then, let us resume."\
 
 cl a,10
 
 ld l,":a;img\k2-ban.jpg",10
-「裁判長。先ほどの法廷で、証言者の発言がずいぶん揺らいでいたように思います。」\
+;「裁判長。先ほどの法廷で、証言者の発言がずいぶん揺らいでいたように思います。」\
+"Your honor, I believe there is something very questionable in the witness's earlier remarks."\
 
 ld r,":a;img\satoko2-giku.jpg",10
-「ショッキングな場面を見てしまったのですもの。証言が揺らぐこともありますですわ。」\
+;「ショッキングな場面を見てしまったのですもの。証言が揺らぐこともありますですわ。」\
+"She had just witnessed a shocking scene. Of course her testimony would waver from that."\
 
 cl a,10
 
 ld c,":a;img\rika-normal.jpg",10
-「では圭一は魅音こそが犯人であると逆告訴するというのですか？」
+;「では圭一は魅音こそが犯人であると逆告訴するというのですか？」
+"So, Keiichi, are you accusing Mion of being the culprit？"
 
-select "１．はい",*hai,"２．いいえ",*iie
+;select "１．はい",*hai,"２．いいえ",*iie
+select "1.　Yes",*hai,"2.　No",*iie
 
 *hai
 ;■はい
@@ -838,19 +1009,23 @@ bgm "sound\fang.mp3"
 cl a,10
 
 ld l,":a;img\k2-igi.jpg",10
-「この状況、俺より魅音の方が、ハッキリ怪しいと言えると思います。」\
+;「この状況、俺より魅音の方が、ハッキリ怪しいと言えると思います。」\
+"Given the circumstances, I think Mion is clearly more suspicious than me."\
 
 cl a,10
 
 ld c,":a;img\mion-odoroki.jpg",10
-（ぎくっ！！）\
+;（ぎくっ！！）\
+（Eek!!）\
 
 cl a,10
 
 ld r,":a;img\satoko2-normal.jpg",10
-「そんな大層なこと言って大丈夫ですの？」\
+;「そんな大層なこと言って大丈夫ですの？」\
+"Is it really all right to make such a bold statement？"\
 ld r,":a;img\satoko2-horane.jpg",10
-「こちらには、圭一さん以外には犯行ができなかったという決定的証拠もあるのですわよ。」\
+;「こちらには、圭一さん以外には犯行ができなかったという決定的証拠もあるのですわよ。」\
+"The prosecution has decisive evidence that shows no one but Keiichi-san could have committed the crime."\
 
 goto *tsuzuki
 
@@ -859,12 +1034,15 @@ goto *tsuzuki
 
 cl a,10
 ld l,":a;img\k2-komari.jpg",10
-「いや、そうとは限らないけど・・・」\
+;「いや、そうとは限らないけど・・・」\
+"No, not necessarily..."\
 
 ld r,":a;img\satoko2-normal.jpg",10
-「ほら、そうでしょうに。自信もないのに変なことを言って法廷を混乱させた罪は重いですわよ。」\
+;「ほら、そうでしょうに。自信もないのに変なことを言って法廷を混乱させた罪は重いですわよ。」\
+"You see？　I told you so. It's a serious crime to disrupt the court, saying weird things that even you yourself aren't confident in."\
 ld r,":a;img\satoko2-horane.jpg",10
-「それに圭一さん以外には犯行ができなかったという決定的証拠もあるのですわよ。」\
+;「それに圭一さん以外には犯行ができなかったという決定的証拠もあるのですわよ。」\
+"Plus, we have decisive evidence that shows no one but Keiichi-san could have committed the crime."\
 
 *tsuzuki
 ;■つづき
@@ -874,7 +1052,8 @@ cl a,10
 
 ld l,":a;img\k2-bibiri.jpg",10
 ld c,":a;img\rena-bikkuri2.jpg",10
-「な、なんだってー！！！」\
+;「な、なんだってー！！！」\
+"Wh-what did you say!？!"\
 
 wait 500
 
@@ -883,64 +1062,82 @@ cl a,10
 bgm "sound\bgml025.mp3"
 
 ld r,":a;img\satoko2-shiryo.jpg",10
-「確かに遺体は煮えたぎったカレーを被るという状況で高熱にさらされていたので、遺体からは死亡診断時刻は測れませんわ。」\
+;「確かに遺体は煮えたぎったカレーを被るという状況で高熱にさらされていたので、遺体からは死亡診断時刻は測れませんわ。」\
+"It's true that the body was exposed to high temperatures when covered in the boiling curry, so the time of death can't be determined from the state of the body."\
 ld r,":a;img\satoko2-normal.jpg",10
-「でも知恵先生は土曜日の夜に帰宅していないっていうことが分かっているのですわ。」\
+;「でも知恵先生は土曜日の夜に帰宅していないっていうことが分かっているのですわ。」\
+"However, we do know for sure that Chie-sensei didn't come home on Saturday night."\
 ld r,":a;img\satoko2-shiryo.jpg",10
-「これは隣人の証言もありますし、死亡時の服装も土曜のまま、電気やガスの使用状況からも明らかですわ。これも証拠として提出させていただきますわ。」\
+;「これは隣人の証言もありますし、死亡時の服装も土曜のまま、電気やガスの使用状況からも明らかですわ。これも証拠として提出させていただきますわ。」\
+"Testimony from a neighbor indicates as much, plus she was still wearing her outfit from Saturday at the time of death, and her home electricity and gas usage records all make this abundantly clear. I will now submit those records as evidence."\
 
-証拠４：電気会社の調査書@
+;証拠４：電気会社の調査書@
+　Evidence 4: Utility company report@
 br
-知恵宅の電気は土曜の朝以降使われていない。\
+;知恵宅の電気は土曜の朝以降使われていない。\
+　No electricity was used at Chie's residence since Saturday morning.\
 
 ld r,":a;img\satoko2-horane.jpg",10
-「校長先生にも確認しましたけど、あの日は残ってするべき仕事もなかったですわ。」\
+;「校長先生にも確認しましたけど、あの日は残ってするべき仕事もなかったですわ。」\
+"I also checked with the principal, but he said she didn't have any work she needed to stay late for on that day."\
 ld r,":a;img\satoko2-normal.jpg",10
-「土曜日は『料理天国』を見るためにいつも早く帰っていたそうですわ。」\
+;「土曜日は『料理天国』を見るためにいつも早く帰っていたそうですわ。」\
+"She always heads home early on Saturdays to watch 'Ryori Tengoku: Cooking Paradise'."\
 
 bg "img\mado.jpg",10
 
 ld c,":a;img\rena-hau.jpg",10
-「料理天国・・・。試食係の龍虎さん、かあいいんだよ。はぅ。」\
+;「料理天国・・・。試食係の龍虎さん、かあいいんだよ。はぅ。」\
+"Cooking Paradise... The taste tester on that show, Ryuuko-san, is so kyute. Hau."\
 ld c,":a;img\rena-hau2.jpg",10
 wait 500
 
 bg "img\01.jpg",10
 
 ld r,":a;img\satoko2-shiryo.jpg",10
-「凶器として大きなカレー鍋が使われたことから犯行現場は学校以外ありえない。」\
+;「凶器として大きなカレー鍋が使われたことから犯行現場は学校以外ありえない。」\
+"The large curry pot was used as the murder weapon, so the crime could not have occurred anywhere but the school."\
 
 ld r,":a;img\satoko2-normal.jpg",10
-「そして土曜日の放課後、知恵先生が帰宅するまでのわずかな時間に犯行が行われた。」\
-「この時間に先生と会っていたのは圭一さんだけ。」\
+;「そして土曜日の放課後、知恵先生が帰宅するまでのわずかな時間に犯行が行われた。」\
+"And the crime was committed after school on Saturday, right as Chie-sensei was about to head home."\
+;「この時間に先生と会っていたのは圭一さんだけ。」\
+"Keiichi-san was the only person who met with her during that time frame."\
 
 ld r,":a;img\satoko2-igi.jpg",10
-「犯行は圭一さん以外には不可能、つまり圭一さんが犯人なのですわ。」\
+;「犯行は圭一さん以外には不可能、つまり圭一さんが犯人なのですわ。」\
+"No one but him could have committed the crime, thus Keiichi-san must be the culprit."\
 
 cl a,10
 
 ld c,":a;img\rika-normal.jpg",10
-「ほう。それは決定的な状況なのですよ。」\
+;「ほう。それは決定的な状況なのですよ。」\
+"Hoh. We've reached a critical situation."\
 
 bg "img\mado.jpg",10
 
 ld c,":a;img\rena-komari.jpg",10
-「ちなみに魅ぃちゃんは、土曜日の放課後は・・・」\
+;「ちなみに魅ぃちゃんは、土曜日の放課後は・・・」\
+"By the way, Mii-chan, what were you doing after school on Saturday...？"\
 
 bg "img\01.jpg",10
 
 ld c,":a;img\mion-akusho.jpg",10
-「何言ってるの、レナ。あんたと一緒に帰って、行ったじゃない。興宮スポーツセンターに。」\
+;「何言ってるの、レナ。あんたと一緒に帰って、行ったじゃない。興宮スポーツセンターに。」\
+"What are you saying Rena？　We left school together, didn't we？　And headed to the Okinomiya Sports center."\
 ld c,":a;img\mion-futeki.jpg",10
-「その後も祝勝会と称して、朝までカラオケを歌ったじゃない。」\
+;「その後も祝勝会と称して、朝までカラオケを歌ったじゃない。」\
+"Then we all held a victory celebration afterwards, and sang karaoke until dawn."\
 
 bg "img\mado.jpg",10
 
 ld c,":a;img\rena-nande.jpg",10
-「はぅ。魅ぃちゃんのアリバイは完璧なんだよ。・・・だよ。」\
+;「はぅ。魅ぃちゃんのアリバイは完璧なんだよ。・・・だよ。」\
+"Hau. Mii-chan's alibi is air tight. ...Air tight."\
 
 ld c,":a;img\rena-hau.jpg",10
-「セーラー服と機関銃・・・さすが、本職だけあって、凄みがあって・・・かぁいかったんだよ。　・・・だよ。」\
+;「セーラー服と機関銃・・・さすが、本職だけあって、凄みがあって・・・かぁいかったんだよ。　・・・だよ。」\
+"Like in 'Sailor Suit and Machine Gun.' ...So professional, so menacing.... It was so kyute. ...So Kyute."\
 ld c,":a;img\rena-hau2.jpg",10
 
 stop
@@ -962,12 +1159,14 @@ wait 500
 bg "img\01.jpg",10
 
 ld c,":a;img\rika-normal.jpg",10
-「反論も無いようですし、そろそろ判決に移りたいと思うのですよ。」\
+;「反論も無いようですし、そろそろ判決に移りたいと思うのですよ。」\
+"It seems there's no counterargument, so I believe it's time to move on to the ruling."\
 
 bg "img\mado.jpg",10
 
 ld c,":a;img\rena-komari.jpg",10
-「圭一くん、何か無いの？圭一くん、しっかりして！？」\
+;「圭一くん、何か無いの？圭一くん、しっかりして！？」\
+"Keiichi-kun, don't we have anything？　Keep it together!"\
 
 ;（暗転、圭一のみ）
 
@@ -983,39 +1182,51 @@ wait 1200
 
 ld c,":a;img\k-ku.jpg",10
 
-なんだって！？
-俺以外の人間には犯行が不可能だって？\
+;なんだって！？
+　What did she say？!\
+;俺以外の人間には犯行が不可能だって？\
+　That it's impossible for anyone but me to have committed the crime？\
 
 ld c,":a;img\k-normal.jpg",10
-確かに俺が先生と会っていたとき、俺以外の生徒は皆下校していたし、営林所の人たちも出て行っていた。\
+　It's true that all the other students had already left school when I was meeting with Chie-sensei, and the forestry staff was gone too.\
 
 ld c,":a;img\k-ku.jpg",10
-先生にはあの後に残る理由もなく、『料理天国』を見るためにも早く帰宅するのは土曜放課後の常だった。\
+;先生にはあの後に残る理由もなく、『料理天国』を見るためにも早く帰宅するのは土曜放課後の常だった。\
+　She had no reason to stay any later than that, and she always headed home early on Saturdays to watch 'Cooking Paradise.'\
 
 ld c,":a;img\k-komari.jpg",10
-しかし、先生は帰宅することなく、学校でカレー鍋を被っていた。\
+;しかし、先生は帰宅することなく、学校でカレー鍋を被っていた。\
+　Yet, Chie-sensei never made it back home, and she was found at school, covered in a pot of curry.\
 
 ld c,":a;img\k-ku.jpg",10
-俺が帰り際に鍋にぶつかって！？\
+;俺が帰り際に鍋にぶつかって！？\
+　Could I have bumped into the pot while I was on my way out？!\
 
 ld c,":a;img\k-komari.jpg",10
-いやそんな感触はなかったと思う。\
+;いやそんな感触はなかったと思う。\
+　No, it feels like that wasn't the case.\
 
 ld c,":a;img\k-normal.jpg",10
-確かに、記憶にはない。
-しかし、俺の記憶は絶対だろうか？\
+;確かに、記憶にはない。
+　I definitely have no memory of it.\
+;しかし、俺の記憶は絶対だろうか？\
+　But, can I be certain my memories are accurate？\
 
 ld c,":a;img\k-ku.jpg",10
-記憶にはないことをふらっとやってしまう・・・そういう人もいると聞く。\
+;記憶にはないことをふらっとやってしまう・・・そういう人もいると聞く。\
+　Sometimes people wander off and do things they don't remember later... I've heard of that happening.\
 
 ld c,":a;img\k-normal.jpg",10
-俺はそうでない・・・と思いたいが、やっていたとしても記憶にはないのだから確かめようがない・・・。\
+;俺はそうでない・・・と思いたいが、やっていたとしても記憶にはないのだから確かめようがない・・・。\
+　I'd like to believe that I didn't do it... but even if I did, with no memory of it there's no way to know for sure...\
 
 ld c,":a;img\k-komari.jpg",10
-まさか、俺があの知恵先生を！？\
+;まさか、俺があの知恵先生を！？\
+　No way, did I actually kill Chie-sensei？!\
 
 ld c,":a;img\k-ku.jpg",10
-そんな・・・\
+;そんな・・・\
+　It can't be...\
 
 stop
 
@@ -1029,11 +1240,13 @@ bg "img\mado.jpg",10
 wait 1200
 
 ld c,":a;img\rena-komari.jpg",10
-「圭一くん、しっかりして。」\
+;「圭一くん、しっかりして。」\
+"Keiichi-kun, hang in there."\
 wait 1200
 bg "img\01.jpg",10
 ld l,":a;img\k2-komari.jpg",10
-「はっ、俺は・・・！？」\
+;「はっ、俺は・・・！？」\
+"Huh？　I...？!"\
 
 bg "img\kizuti.jpg",10
 wave "sound\wood05.wav"
@@ -1048,13 +1261,15 @@ wait 500
 bg "img\01.jpg",10
 
 ld c,":a;img\rika-normal.jpg",10
-「では、判決なのですよ。」\
+;「では、判決なのですよ。」\
+"All right, it seems we've reached a verdict."\
 
 stop
 
 cl a,10
 
-「ちょっと、待ったあ！！！！！！！！！！！」\
+;「ちょっと、待ったあ！！！！！！！！！！！」\
+"Waaaaait a minute!!!!!!!!!!!"\
 
 
 wait 500
@@ -1063,52 +1278,65 @@ bgm "sound\tamco07.mp3"
 
 
 ld r,":a;img\satoko2-giku.jpg",10
-「はっ！？誰ですの？」\
+;「はっ！？誰ですの？」\
+"Huh？! Who was that？"\
 
 ld l,":a;img\k2-ehen.jpg",10
-「俺だ！」\
+;「俺だ！」\
+"Me!"\
 
 ld r,":a;img\satoko2-igi.jpg",10
-「この期に及んで何ですの？」\
+;「この期に及んで何ですの？」\
+"What do you think you can do at this point？"\
 
 ld l,":a;img\k2-komarimae.jpg",10
-（駄目だ、何も言うことがない・・・）\
+;（駄目だ、何も言うことがない・・・）\
+（It's useless, I don't have anything I can say...）\
 
 bg "img\mado.jpg",10
 ld c,":a;img\rena-bikkuri2.jpg",10
-「圭一くん、どうしたの？」\
+;「圭一くん、どうしたの？」\
+"Keiichi-kun, what is it？"\
 
 wait 500
 bg "img\01.jpg",10
 wait 500
 
 ld c,":a;img\rika-normal.jpg",10
-「これ以上、法廷を止めることは許しませんですよ。」\
+;「これ以上、法廷を止めることは許しませんですよ。」\
+"I will not allow you to delay court proceedings any longer."\
 
 wait 500
 bg "img\black.bmp",10
 wait 500
 
 ld c,":a;img\k2-komari.jpg",10
-（もはやこれまでか・・・。）\
+;（もはやこれまでか・・・。）\
+（Is this really the end...？）\
 
 ld c,":a;img\k2-bibiri.jpg",10
-（判決が下れば、一切の行動の自由がなくなり、あとは死刑を待つだけ。）\
+;（判決が下れば、一切の行動の自由がなくなり、あとは死刑を待つだけ。）\
+（Once the verdict is handed down, I won't be able to do anything except await the death penalty.）\
 
 ld c,":a;img\k2-agoyubi.jpg",10
-（ならば、今が思うままに行動できる最後の機会だ。）\
+;（ならば、今が思うままに行動できる最後の機会だ。）\
+（Which means, right now, this is my last chance to do something.）\
 
 ld c,":a;img\k2-ehen.jpg",10
-（今こそ、人生最後の輝きを放つとき！）\
+;（今こそ、人生最後の輝きを放つとき！）\
+（Now is the time to shine with the last of your human life!）\
 
 ld c,":a;img\k2-ban.jpg",10
-（思い残すことがないよう、欲望のままに行動してやる！！）\
+;（思い残すことがないよう、欲望のままに行動してやる！！）\
+（Cast aside your inhibitions and act now, so you won't be left with any regrets!!）\
 
 *rinne
 ld c,":a;img\k2-ban.jpg",10
 
-誰を襲いますか？
-select "１．レナ",*rena,"２．魅音",*mion,"３．沙都子",*satoko,"４．梨花",*rika
+;誰を襲いますか？
+　Who do I focus my attack on？
+;select "１．レナ",*rena,"２．魅音",*mion,"３．沙都子",*satoko,"４．梨花",*rika
+select "1.　Rena",*rena,"2.　Mion",*mion,"3.　Satoko",*satoko,"4.　Rika",*rika
 
 ;魅音以外の場合は、変態扱いされてGAMEOVER→罰ゲーム。
 
@@ -1117,16 +1345,23 @@ select "１．レナ",*rena,"２．魅音",*mion,"３．沙都子",*satoko,"４．梨花",*rika
 bg "img\black.bmp",10
 wait 1200
 
-レナを襲う！？
-なんて愚かな判断をしてしまったんだ・・・俺は。
+;レナを襲う！？
+　You're attacking Rena？!
+;なんて愚かな判断をしてしまったんだ・・・俺は。
+　What a stupid decision... Way to go, me.
 
 ld c,":a;img\rena-warai2.jpg",10
 
-戦力の差は圧倒的だった・・・。\
-スパパパパ・・・\
-パンチなんだか、キックなんだか、それとも頭突きなんだか。\
-それさえも見極めることができずに・・・\
-ケンシロウに襲い掛かるモヒカン野郎のように、@俺は息絶えた。\
+;戦力の差は圧倒的だった・・・。\
+　The strength difference between us is too great...\
+;スパパパパ・・・\
+　Chop chop chop...\
+;パンチなんだか、キックなんだか、それとも頭突きなんだか。\
+　Were those punches？　Kicks？　Headbutts？\
+;それさえも見極めることができずに・・・\
+　I couldn't even tell...\
+;ケンシロウに襲い掛かるモヒカン野郎のように、@俺は息絶えた。\
+　Like a dude with a mohawk who had the audacity to attack Kenshiro...@ I got destroyed.\
 
 goto *gameover
 
@@ -1136,12 +1371,17 @@ goto *gameover
 bg "img\black.bmp",10
 wait 1200
 
-バリバリバリバリ・・・
-スカートに手を掛けたその瞬間、強力な電流が襲い掛かってきた。\
-薄れゆく意識の中で、最後に見た沙都子は、\
+;バリバリバリバリ・・・
+　Crackle crackle...
+;スカートに手を掛けたその瞬間、強力な電流が襲い掛かってきた。\
+　The moment I touched her skirt, I was struck by a powerful jolt of electricity.\
+;薄れゆく意識の中で、最後に見た沙都子は、\
+　As my consciousness was fading out, the last thing I saw was...\
 ld c,":a;img\satoko-normal.jpg",10
-「我が夫となるものは、更ににおぞましきモノを見るだろう」\
-と語りかけているように見えた・・・\
+;「我が夫となるものは、更ににおぞましきモノを見るだろう」\
+　Satoko, saying something like...\
+;と語りかけているように見えた・・・\
+"My future husband would do something even more horrifying to you."\
 
 goto *gameover
 
@@ -1151,11 +1391,15 @@ goto *gameover
 bg "img\black.bmp",10
 wait 1200
 
-見た目に似合わず老獪な梨花ちゃん。\
-俺のたくらみを察知していたのか、飛び掛ったがサラリと身をかわされてしまった。\
+;見た目に似合わず老獪な梨花ちゃん。\
+　Rika-chan is far more cunning than she looks.\
+;俺のたくらみを察知していたのか、飛び掛ったがサラリと身をかわされてしまった。\
+　She must've sensed what I was scheming, because she was able to dodge easily when I jumped at her.\
 ld c,":a;img\rika-nipa.jpg",10
-その次の瞬間、背中にチクリと何かが刺さる感触があった。
-薄れゆく意識の中で最後にみたのは、針が不気味に光る注射器を持った梨花ちゃんであった。\
+;その次の瞬間、背中にチクリと何かが刺さる感触があった。
+　And the next moment, I felt something prick me in the back.\
+;薄れゆく意識の中で最後にみたのは、針が不気味に光る注射器を持った梨花ちゃんであった。\
+　As my consciousness faded out, the last thing I saw was Rika-chan holding a syringe, with an eerie glow coming from the tip of the needle.\
 
 goto *gameover
 
@@ -1177,13 +1421,17 @@ cl a,10
 wait 3000
 
 ld c,":a;img\rika2-komari.jpg",10
-「圭一、間違えちゃったのですか？」\
+;「圭一、間違えちゃったのですか？」\
+"Did you make a mistake？"\
 ld c,":a;img\rika2-normal.jpg",10
-「圭一は、今、時間の環の中に居る。もう一度チャンスがあるのですよ。」\
+;「圭一は、今、時間の環の中に居る。もう一度チャンスがあるのですよ。」\
+"Keiichi, you are now caught in a time loop, so you will be given another chance."\
 ld c,":a;img\rika2-warai.jpg",10
-「圭一の選択で未来に進めるか否かが決まるのですよ。」\
+;「圭一の選択で未来に進めるか否かが決まるのですよ。」\
+"Your choices will determine whether or not we can move forward into the future."\
 ld c,":a;img\rika2-nipa.jpg",10
-「よくよく考えて選択するのですよ。」\
+;「よくよく考えて選択するのですよ。」\
+"Think very carefully, then make your choice."\
 
 cl a,10
 wait 3000
@@ -1199,47 +1447,60 @@ stop
 bg "img\01.jpg",10
 
 ld l,":a;img\rena-bikkuri.jpg",10
-「圭一くん！」\
+;「圭一くん！」\
+"Keiichi-kun!"\
 ld r,":a;img\satoko2-giku.jpg",10
-「圭一さん！」\
+;「圭一さん！」\
+"Keiichi-san!"\
 ld c,":a;img\rika-normal.jpg",10
-「圭一！」\
+;「圭一！」\
+"Keiichi!"\
 
 bg "img\01.jpg",10
 bgm "sound\45.mp3"
 
 ld c,":a;img\in-suka.jpg",10
-「うわっ、何！？ちょっ・・・、やめ・・・」\
+;「うわっ、何！？ちょっ・・・、やめ・・・」\
+"Whoa, what the？! Hold o... Sto..."\
 
 bg "img\black.bmp",10
 
 ld c,":a;img\k-niyari.jpg",10
-「くんくん・・・」\
-（欲望の赴くままに、クンクンしてやるぜ！）\
-（全年齢向けソフトの限界まで挑戦だ！）\
+;「くんくん・・・」\
+"Heh heh..."\
+;（欲望の赴くままに、クンクンしてやるぜ！）\
+（If I'm casting aside my inhibitions, then I'm going for the sniff test!）\
+;（全年齢向けソフトの限界まで挑戦だ！）\
+（Pushing the limits of 'all-ages' software!）\
 
 bg "img\01.jpg",10
 ld r,":a;img\satoko2-giku.jpg",10
-「とち狂ったの？圭一さん！」\
+;「とち狂ったの？圭一さん！」\
+"Have you gone mad, Keiichi-san？!"\
 
 ld l,":a;img\rena-nande.jpg",10
-「圭一くん！変態さんなんだよ！・・・だよ！」\
+;「圭一くん！変態さんなんだよ！・・・だよ！」\
+"Keiichi-kun! You're a pervert! ...A pervert!"\
 
 bg "img\black.bmp",10
 
 ld c,":a;img\k-normal.jpg",10
-（アレ！？何だ？この美味しそうな匂い。）\
+;（アレ！？何だ？この美味しそうな匂い。）\
+（Huh？! What is this delicious scent？）\
 
 ld c,":a;img\k-niyari.jpg",10
-「スパイシーな香りがする・・・」\
+;「スパイシーな香りがする・・・」\
+"It's got a spicy aroma..."\
 
 bg "img\01.jpg",10
 ld c,":a;img\in-suka.jpg",10
-「て・・・、訂正しろ！スパイシーな匂いなんて・・・断じてしない！！」\
+;「て・・・、訂正しろ！スパイシーな匂いなんて・・・断じてしない！！」\
+"C... correction! This... isn't just any spicy scent!!"\
 
 bg "img\black.bmp",10
 ld c,":a;img\k-normal.jpg",10
-「この匂いはカレーだ！！」\
+;「この匂いはカレーだ！！」\
+"It's the fragrant aroma of curry!!"\
 
 stop
 
@@ -1247,22 +1508,28 @@ bg "img\01.jpg",10
 ld l,":a;img\rena-bikkuri.jpg",10
 ld r,":a;img\satoko2-giku.jpg",10
 ld c,":a;img\rika-normal.jpg",10
-「えっ・・・！？」\
+;「えっ・・・！？」\
+"Wha...？!"\
 
 bg "img\black.bmp",10
 
 ld c,":a;img\in-suka.jpg",10
-（えっ！？あのとき返り血ならぬ、返りカレーを浴びた服は全部井戸に処分したし・・・）\
-（シャワーにも長い時間入って石鹸の匂いでカレーの匂いをよく打ち消したはずなのに・・・）\
+;（えっ！？あのとき返り血ならぬ、返りカレーを浴びた服は全部井戸に処分したし・・・）\
+（Huh？! But I took all the blood-stained, I mean, curry-stained clothes and dumped them in the well...）\
+;（シャワーにも長い時間入って石鹸の匂いでカレーの匂いをよく打ち消したはずなのに・・・）\
+（Then I took a nice long shower, so the soapy smell should've adequately neutralized the curry smell...）\
 
 
 bgm "sound\tenku.mp3"
 
 
 bg "img\fujiko.jpg",10
-「ここだ！魅音のトレードマーク、普段は肩から提げている拳銃。」\
-「制服の時は、スカートの中にあったんだ。」\
-「その銃口の中からカレーの匂いがするぞ。」\
+;「ここだ！魅音のトレードマーク、普段は肩から提げている拳銃。」\
+"Here it is! The trademark pistol Mion always carries over her shoulder."\
+;「制服の時は、スカートの中にあったんだ。」\
+"So you have it hidden under your skirt when you're wearing your school uniform."\
+;「その銃口の中からカレーの匂いがするぞ。」\
+"You can smell the curry, coming straight from the muzzle of the gun."\
 
 
 
@@ -1271,53 +1538,67 @@ bg "img\01.jpg",10
 ld l,":a;img\rena-bikkuri.jpg",10
 ld r,":a;img\satoko2-giku.jpg",10
 ld c,":a;img\rika-normal.jpg",10
-「な、なんだって！？」\
+;「な、なんだって！？」\
+"Wh-what？!"\
 
 cl a,10
 ld c,":a;img\mion-odoroki.jpg",10
-「くっ・・・」\
+;「くっ・・・」\
+"Rgh..."\
 
 bg "img\black.bmp",10
 ld c,":a;img\mion-odoroki.jpg",10
-（銃口の中か・・・。見落ちたわ・・・。）\
+;（銃口の中か・・・。見落ちたわ・・・。）\
+（In the muzzle, huh...？　I totally overlooked that...）\
 bg "img\01.jpg",10
 
 ld l,":a;img\k2-ban.jpg",10
-「こんな中にカレーが入るなんて通常はありえない。」\
+;「こんな中にカレーが入るなんて通常はありえない。」\
+"Under no normal circumstances would you find curry in a place like this."\
 ld l,":a;img\k2-igi.jpg",10
-「カレーがすごく跳ね散るようなことに出会わない限り！」\
+;「カレーがすごく跳ね散るようなことに出会わない限り！」\
+"It would only happen in a situation where curry was being splattered everywhere!"\
 
 ld r,":a;img\satoko2-giku.jpg",10
-「くっ・・・」\
+;「くっ・・・」\
+"Urk..."\
 
 ld r,":a;img\satoko2-igi.jpg",10
-「圭一さん、忘れたんですの？魅音さんには完璧なアリバイがあるってことを。」\
+;「圭一さん、忘れたんですの？魅音さんには完璧なアリバイがあるってことを。」\
+"Keiichi-san, you haven't forgotten, have you？　Mion-san still has an air tight alibi."\
 
 bg "img\mado.jpg",10
 
 ld c,":a;img\rena-nande.jpg",10
-「そうだよ、圭一くん。魅ぃちゃんには不可能だよ。・・・だよ。」\
+;「そうだよ、圭一くん。魅ぃちゃんには不可能だよ。・・・だよ。」\
+"That's right. Keiichi-kun, this would be impossible for Mii-chan. ...For Mii-chan."\
 
 bg "img\01.jpg",10
 
 ld c,":a;img\mion-akusho.jpg",10
-「確かにこんなところにカレーが付いているのは、あたしにとっても不可解だけど・・・」\
-「あたしにはその時間、犯行をすることができなかった。」\
+;「確かにこんなところにカレーが付いているのは、あたしにとっても不可解だけど・・・」\
+"I'll admit it's puzzling to find curry in a gun like this, but..."\
+;「あたしにはその時間、犯行をすることができなかった。」\
+"It was simply not possible for me to commit the crime during that time frame."\
 ld c,":a;img\mion-futeki.jpg",10
-「これで十分でしょ、圭ちゃん。」\
+;「これで十分でしょ、圭ちゃん。」\
+"And that's all that matters, Kei-chan."\
 
 cl a,10
 
 
 ld l,":a;img\k2-komarimae.jpg",10
-（駄目なのか・・・！？　一筋の光明が見えたと思ったんだけど、それでも結局は駄目なのか？）\
+;（駄目なのか・・・！？　一筋の光明が見えたと思ったんだけど、それでも結局は駄目なのか？）\
+（Was it all useless...？! I thought I could see a ray of light, but in the end it's still not good enough？）\
 
 cl a,10
 
 ld c,":a;img\rika-normal.jpg",10
-「被告はどういう主張をしたいのですか？」
+;「被告はどういう主張をしたいのですか？」
+"Defendant, what is it you're trying to argue here？"
 
-select "Ａ：犯人は魅音である。",*hannin_dearu,"Ｂ：魅音は犯人ではない。",*hannin_janai
+;select "Ａ：犯人は魅音である。",*hannin_dearu,"Ｂ：魅音は犯人ではない。",*hannin_janai
+select "A:　Mion　is　the　culprit",*hannin_dearu,"B:　Mion　is　not　the　culprit",*hannin_janai
 
 
 *hannin_janai
@@ -1326,28 +1607,37 @@ select "Ａ：犯人は魅音である。",*hannin_dearu,"Ｂ：魅音は犯人ではない。",*hannin
 cl a,10
 
 ld l,":a;img\k2-ban.jpg",10
-「やっぱり、犯人は魅音じゃないよ。」\
+;「やっぱり、犯人は魅音じゃないよ。」\
+"In the end, Mion is not the culprit."\
 
 ld r,":a;img\satoko2-horane.jpg",10
-「そうでしょうとも。」\
+;「そうでしょうとも。」\
+"Yes, indeed."\
 
 ld r,":a;img\satoko2-normal.jpg",10
-「魅音さんには鉄壁のアリバイがある」\
+;「魅音さんには鉄壁のアリバイがある」\
+"After all, Mion-san has a rock-solid alibi."\
 
 ld l,":a;img\k2-komari.jpg",10
-（この主張では、道が開けない。ニッチもサッチもいかないよ・・・）\
-（ええい、イチかバチかの勝負にでてやるぜ。）\
+;（この主張では、道が開けない。ニッチもサッチもいかないよ・・・）\
+（That angle of attack won't go anywhere. No matter what I say, it won't make a difference...）\
+;（ええい、イチかバチかの勝負にでてやるぜ。）\
+（Fine, if it's all or nothing, I'll take my chances.）\
 
 ld l,":a;img\k2-ban.jpg",10
-「やっぱり、犯人は魅音だよ。」\
+;「やっぱり、犯人は魅音だよ。」\
+"In the end, Mion is the culprit."\
 
 cl a,10
 
 ld c,":a;img\rika-komari.jpg",10
-「圭一、さっきから言ってることがコロコロかわっているのですよ。」\
+;「圭一、さっきから言ってることがコロコロかわっているのですよ。」\
+"Keiichi, that's completely opposite from what you stated a moment ago."\
 ld c,":a;img\rika-normal.jpg",10
-「苦し紛れに法廷を混乱させようとしているのですか。」\
-「それに、魅ぃの土曜日のアリバイは完璧なものだと思うのですよ。」\
+;「苦し紛れに法廷を混乱させようとしているのですか。」\
+"Are you lashing out in despair and trying to disrupt court proceedings？"\
+;「それに、魅ぃの土曜日のアリバイは完璧なものだと思うのですよ。」\
+"Besides, I believe we've established that Mii has an air tight alibi for all of Saturday."\
 
 cl a,10
 
@@ -1359,36 +1649,44 @@ goto *not_doyou
 cl a,10
 
 ld l,":a;img\k2-ban.jpg",10
-「やっぱり、犯人は魅音だよ。」\
+;「やっぱり、犯人は魅音だよ。」\
+"In the end, Mion is the culprit."\
 
 ld r,":a;img\satoko2-udegumi.jpg",10
-「どういうことですの？」\
+;「どういうことですの？」\
+"What is the meaning of this？"\
 
 bg "img\mado.jpg",10
 
 ld c,":a;img\rena-nande.jpg",10
-「魅ぃちゃんは確かに、私と一緒にいた。その主張には無理があるんじゃないかな？・・・かな？」\
+;「魅ぃちゃんは確かに、私と一緒にいた。その主張には無理があるんじゃないかな？・・・かな？」\
+"I'm certain that Mii-chan was with me at the time. You don't think there's anything unreasonable about that claim, do you？ ...Do you？"\
 
 bg "img\01.jpg",10
 
 ld c,":a;img\rika-normal.jpg",10
-「どういう根拠で魅音が犯人というのですか？出鱈目な主張で法廷を混乱させ、人を訴えたという罪まで被ることになるのですよ。」\
+;「どういう根拠で魅音が犯人というのですか？出鱈目な主張で法廷を混乱させ、人を訴えたという罪まで被ることになるのですよ。」\
+"On what grounds are you arguing that Mion is the culprit？　If you're disrupt the courtroom with nonsense claims and even falsely accusing people, then I'll have you pay for your crimes."\
 
 bg "img\black.bmp",10
 
 
 ld c,":a;img\k2-komarimae.jpg",10
-（ああっ、言ってしまった。完璧なアリバイがある魅音が犯人だなんて・・・。）\
+;（ああっ、言ってしまった。完璧なアリバイがある魅音が犯人だなんて・・・。）\
+（Yeah, I went and said it. Even with an air tight alibi, I accused Mion of being the culprit...\
 
 ld c,":a;img\k2-komari.jpg",10
-（これで間違いなら、ただの死刑から『村中引き回しの上、磔獄門』に刑罰がグレードアップしちゃうよ・・・。）\
+;（これで間違いなら、ただの死刑から『村中引き回しの上、磔獄門』に刑罰がグレードアップしちゃうよ・・・。）\
+（If I'm wrong here, my punishment will be upgraded from the death penalty to 'dragged through the village and then crucified.'）\
 
 ld c,":a;img\k2-agoyubi.jpg",10
-（しかし、もう言ってしまった以上、この主張でいくしかない。でも、魅音が犯人だとして、なんで完璧なアリバイがあるんだ？）\
+;（しかし、もう言ってしまった以上、この主張でいくしかない。でも、魅音が犯人だとして、なんで完璧なアリバイがあるんだ？）\
+（But I've already said it, so my only option is to pursue this line of reasoning. And yet, if Mion is actually the culprit, how could she have such a perfect alibi？）\
 
 *aribai
 
-select "Ａ：アリバイはウソ",*uso,"Ｂ：犯行は土曜日ではない",*not_doyou
+;select "Ａ：アリバイはウソ",*uso,"Ｂ：犯行は土曜日ではない",*not_doyou
+select "A:　The　alibi　is　false",*uso,"B:　It　didn't　happen　on　Saturday",*not_doyou
 
 *uso
 
@@ -1397,16 +1695,20 @@ select "Ａ：アリバイはウソ",*uso,"Ｂ：犯行は土曜日ではない",*not_doyou
 bg "img\01.jpg",10
 
 ld l,":a;img\k2-igi.jpg",10
-「魅音のアリバイはウソだ！」\
+;「魅音のアリバイはウソだ！」\
+"Mion's alibi is a fabrication!"\
 
 bg "img\mado.jpg",10
 
 ld c,":a;img\rena-higurashi.jpg",10
-「圭一くん、ちゃんと聞いてたかな？・・・かな？」\
+;「圭一くん、ちゃんと聞いてたかな？・・・かな？」\
+"Keiichi-kun, you were paying attention, weren't you？ ...Weren't you？"\
 ld c,":a;img\rena-higurashi2.jpg",10
-「土曜日から日曜の朝まで、レナは魅ぃちゃんとずっと一緒だったんだよ。・・・だよ。」\
+;「土曜日から日曜の朝まで、レナは魅ぃちゃんとずっと一緒だったんだよ。・・・だよ。」\
+"From Saturday until Sunday morning, Rena was together with Mii-chan the whole time. ...Whole time."\
 ld c,":a;img\rena-higurashi.jpg",10
-「それもと、圭一くんはレナのことも疑っているのかな？・・・かな？」\
+;「それもと、圭一くんはレナのことも疑っているのかな？・・・かな？」\
+"Keiichi-kun, you're not doubting me too, are you？ ...Are you？"\
 
 bg "img\black.bmp",10
 
@@ -1418,58 +1720,70 @@ goto *aribai
 ;■Ｂ：犯行は土曜日ではない
 
 ld c,":a;img\k2-agoyubi.jpg",10
-（そうだ、魅音の土曜日のアリバイは完璧なものだ。ということは、犯行が土曜日ではなかったんだ。）\
+;（そうだ、魅音の土曜日のアリバイは完璧なものだ。ということは、犯行が土曜日ではなかったんだ。）\
+（Yes, Mion's alibi for Saturday is air tight. Which means the crime must not have been committed on Saturday.）\
 
 bg "img\01.jpg",10
 
 ld l,":a;img\k2-normal.jpg",10
-「確かに土曜日の魅音のアリバイは完璧だ。それは認める。」\
+;「確かに土曜日の魅音のアリバイは完璧だ。それは認める。」\
+"Indeed, Mion's alibi for Saturday is rock-solid. I'll admit that."\
 
 ld r,":a;img\satoko2-igi.jpg",10
-「ほら、御覧なさい。魅音さんは犯人ではないんでしょ。」\
+;「ほら、御覧なさい。魅音さんは犯人ではないんでしょ。」\
+"See？　Like I said, Mion-san is not the culprit."\
 
 ld l,":a;img\k2-ban.jpg",10
-「しかし、だ。犯行が土曜日ではなかったとしたら！？」\
+;「しかし、だ。犯行が土曜日ではなかったとしたら！？」\
+"And yet, what if the crime wasn't committed on Saturday？!"\
 
 cl a,10
 
 ld c,":a;img\mion-odoroki.jpg",10
-（ギクッ）\
+;（ギクッ）\
+（Gulp）\
 
 ld r,":a;img\satoko2-shiryo.jpg",10
-「それはありえませんですわ。先生は帰宅する前に事件に会ってしまったのですもの。」\
+;「それはありえませんですわ。先生は帰宅する前に事件に会ってしまったのですもの。」\
+"That is impossible. The incident occurred before Chie-sensei ever headed home."\
 
 bg "img\black.bmp",10
 
 ld c,":a;img\k2-komarimae.jpg",10
-（ああ、そうだったんんだよなー。先生は帰宅しなかった。しかし土曜日の犯行でもない。どういうことだろ・・・。）\
+;（ああ、そうだったんんだよなー。先生は帰宅しなかった。しかし土曜日の犯行でもない。どういうことだろ・・・。）\
+（Yeah, that's right. Chie-sensei never made it home. And yet, the crime didn't happen on Saturday either. What does it mean...？）\
 
 bg "img\01.jpg",10
 
 ld c,":a;img\rika-normal.jpg",10
-「圭一、犯行が土曜日でないとはどういうことですか？」\
+;「圭一、犯行が土曜日でないとはどういうことですか？」\
+"Keiichi, what do you mean the crime wasn't committed on Saturday？"\
 
 
 bg "img\black.bmp",10
 
 ld c,":a;img\k2-komari.jpg",10
-（それは、俺が聞きたいところだよ。先生は誰も居ない学校に日曜日まで居た。仕事もないのに。『料理天国』見るのも諦めて・・・。ありえないよ・・・。）\
+;（それは、俺が聞きたいところだよ。先生は誰も居ない学校に日曜日まで居た。仕事もないのに。『料理天国』見るのも諦めて・・・。ありえないよ・・・。）\
+（That's what I'd like to know. She stayed in the school building alone until Sunday？　Even though she had no work to do？　She even skipped watching 'Cooking Paradise'...？　It's unthinkable...）\
 
 bg "img\01.jpg",10
 
 ld l,":a;img\k2-ehen.jpg",10
-「決定的な証拠があるんだよ。犯行は土曜日ではなかったという。」\
+;「決定的な証拠があるんだよ。犯行は土曜日ではなかったという。」\
+"I have decisive evidence that proves the crime wasn't committed on Saturday."\
 
 bg "img\black.bmp",10
 
 ld l,":a;img\k2-komari.jpg",10
-（ああ、また大きな口叩いちゃった・・・）\
+;（ああ、また大きな口叩いちゃった・・・）\
+（Yeah, there I go talking big again...）\
 
 bg "img\01.jpg",10
 
 ld c,":a;img\rika-normal.jpg",10
 stop
-「その証拠はどれですか。指し示してください。」\
+;「その証拠はどれですか。指し示してください。」\
+"Which piece of evidence is it？　Please point it out."\
 
 bgm "sound\bgm0042_SFX.mp3"
 
@@ -1482,48 +1796,62 @@ bgm "sound\bgm0042_SFX.mp3"
 mov %5,1
 
 br
-知恵の死亡診断書
+;知恵の死亡診断書
 br
-カレー
+;カレー
 br
-営林署員の証言
+;営林署員の証言
 br
-電気会社の調査書
+;電気会社の調査書
 
-csel "読む",*ss1,"突きつける",*ss2,
-"読む",*ss3,"突きつける",*ss4,
-"読む",*ss5,"突きつける",*ss6,
-"読む",*ss7,"突きつける",*ss8
-
+;csel "読む",*ss1,"突きつける",*ss2,
+;"読む",*ss3,"突きつける",*ss4,
+;"読む",*ss5,"突きつける",*ss6,
+;"読む",*ss7,"突きつける",*ss8
+csel "Read'Autopsy　Rpt.'",*ss1,"Present'Autopsy　Rpt.'",*ss2,
+"Read'Curry'",*ss3,"Present'Curry'",*ss4,
+"Read'Testimony'",*ss5,"Present'Testimony'",*ss6,
+"Read'Utility　Rpt.'",*ss7,"Present'Utility　Rpt.'",*ss8
 
 
 
 *ss1
-知恵の死亡診断書@
+;知恵の死亡診断書@
+　Chie's autopsy report.@
 br
-知恵先生は、中身の入ったカレー鍋を被って硬直していた。@
-死亡日時は不明。@
+;知恵先生は、中身の入ったカレー鍋を被って硬直していた。@
+　Chie-sensei was found stiff and covered in the contents of the curry pot.@
+;死亡日時は不明。@
+　The time of death is unknown.@
 br
-保健委員　富田大樹\
+;保健委員　富田大樹\
+　- Student Health Officer, Daiki Tomita\
 
 goto *sentakushi2
 
 *ss2
 
 ld c,":a;img\rena-nande.jpg",10
-「どうかな？・・・どうかな？」\
-「それが決定的証拠なのかな」\
-「レナにはそう思えないんだよ。・・・だよ」\
+;「どうかな？・・・どうかな？」\
+"Really？ ...Really？"\
+;「それが決定的証拠なのかな」\
+"That's supposed to be decisive evidence？"\
+;「レナにはそう思えないんだよ。・・・だよ」\
+"Rena doesn't think so. ...Think so."\
 ld c,":a;img\rena-komari.jpg",10
 
 goto *sentakushi2
 
 *ss3
-カレー@
+;カレー@
+　Curry.@
 br
-本事件の凶器となったカレー。@
-直径６０ｃｍ深さ３０ｃｍ程度の銅製の鍋に入っていた。@
-状態から、鍋ごと勢い良く被せられたと考えられる。\
+;本事件の凶器となったカレー。@
+　The murder weapon of this incident.@
+;直径６０ｃｍ深さ３０ｃｍ程度の銅製の鍋に入っていた。@
+　Was inside a copper cooking pot, roughly 60cm in diameter and 30cm deep.@
+;状態から、鍋ごと勢い良く被せられたと考えられる。\
+　Based on the state of the scene, it is believed that the entire pot was vigorously poured on her.\
 
 goto *sentakushi2
 
@@ -1532,20 +1860,28 @@ goto *sentakushi2_nuke
 
 
 *ss5
-営林署員の証言@
+;営林署員の証言@
+　Forestry officer's testimony.@
 br
-土曜の放課後、１２時半ごろ、私は帰宅しました。@
-学校には私の他には、知恵先生と前原君だけがいました。@
-２人は、『カレー食べさせてくれよー』、『だめです』といった内容の押し問答をしていました。\
+;土曜の放課後、１２時半ごろ、私は帰宅しました。@
+　I went home after school ended on Saturday, around 12:30.@
+;学校には私の他には、知恵先生と前原君だけがいました。@
+　Aside from myself, nobody but Chie-sensei and Maebara-kun were at the school building.@
+;２人は、『カレー食べさせてくれよー』、『だめです』といった内容の押し問答をしていました。\
+　The two of them were engaged in an argument, saying things like 'Let me eat the curry!' and 'You can't!'\
+
 
 
 goto *sentakushi2
 
 *ss6
 ld c,":a;img\rena-nande.jpg",10
-「どうかな？・・・どうかな？」\
-「それが決定的証拠なのかな」\
-「レナにはそう思えないんだよ。・・・だよ」\
+;「どうかな？・・・どうかな？」\
+"Really？ ...Really？"\
+;「それが決定的証拠なのかな」\
+"That's supposed to be decisive evidence？"\
+;「レナにはそう思えないんだよ。・・・だよ」\
+"Rena doesn't think so. ...Think so."\
 ld c,":a;img\rena-komari.jpg",10
 
 goto *sentakushi2
@@ -1554,17 +1890,22 @@ goto *sentakushi2
 
 
 *ss7
-電気会社の調査書@
+;電気会社の調査書@
+　Utility company report@
 br
-知恵宅の電気は土曜の朝以降使われていない。\
+;知恵宅の電気は土曜の朝以降使われていない。\
+　No electricity was used at Chie's residence since Saturday morning.\
 
 goto *sentakushi2
 
 *ss8
 ld c,":a;img\rena-nande.jpg",10
-「どうかな？・・・どうかな？」\
-「それが決定的証拠なのかな」\
-「レナにはそう思えないんだよ。・・・だよ」\
+;「どうかな？・・・どうかな？」\
+"Really？ ...Really？"\
+;「それが決定的証拠なのかな」\
+"That's supposed to be decisive evidence？"\
+;「レナにはそう思えないんだよ。・・・だよ」\
+"Rena doesn't think so. ...Think so."\
 ld c,":a;img\rena-komari.jpg",10
 goto *sentakushi2
 
@@ -1584,17 +1925,20 @@ stop
 cl a,10
 
 ld l,":a;img\k2-ban.jpg",10
-「知恵先生が大好きなテレビ番組や帰宅を諦めてまで学校に残った理由。それはカレー。カレー以外考えられません。」\
+;「知恵先生が大好きなテレビ番組や帰宅を諦めてまで学校に残った理由。それはカレー。カレー以外考えられません。」\
+"The reason Chie-sensei decided to skip her favorite TV show and stay at school instead of going home？　It's curry. I can't think of anything else it could be."\
 
 cl a,10
 
 ld c,":a;img\rika-normal.jpg",10
-「カレーがどうかしたのですか？」\
+;「カレーがどうかしたのですか？」\
+"What about the curry？"\
 
 bg "img\black.bmp",10
 
 ld l,":a;img\k2-komari.jpg",10
-（それはこっちが聞きたいんだって！）\
+;（それはこっちが聞きたいんだって！）\
+（That's what I'd like to know!）\
 
 bg "img\mado.jpg",10
 
@@ -1615,51 +1959,63 @@ bgm "sound\tamsp11.mp3"
 
 
 ld c,":a;img\rena-choiwara.jpg",10
-「そうか圭一くん、カレーね！知恵先生は私たちによく煮込まれた洋風カレーを食べさせたがっていた。」\
+;「そうか圭一くん、カレーね！知恵先生は私たちによく煮込まれた洋風カレーを食べさせたがっていた。」\
+"Keiichi-kun, that's it, curry! Chie-sensei wanted us to eat that well stewed western-style curry."\
 
 bg "img\01.jpg",10
 
 ld r,":a;img\satoko2-giku.jpg",10
-「ま、まさか・・・」\
+;「ま、まさか・・・」\
+"N-no way..."\
 
 ld l,":a;img\rena-choiwara2.jpg",10
-「そう。洋風カレーを最高に美味しい状態にするには・・・」\
+;「そう。洋風カレーを最高に美味しい状態にするには・・・」\
+"Yes, and to make the tastiest western-style curry..."\
 
 ld r,":a;img\satoko2-normal.jpg",10
-「弱火でコトコト長時間煮込む必要がある。」\
+;「弱火でコトコト長時間煮込む必要がある。」\
+"You have to simmer it over low heat for a very long time."\
 
 bg "img\black.bmp",10
 
 ld c,":a;img\k2-komarimae.jpg",10
-（そ、そうだったのか・・・！？）\
+;（そ、そうだったのか・・・！？）\
+（R-right...？!）\
 
 bg "img\01.jpg",10
 
 ld r,":a;img\satoko2-giku.jpg",10
-「しかし、そんなこと専門のレストランでもなければやってないはずですわ。」\
+;「しかし、そんなこと専門のレストランでもなければやってないはずですわ。」\
+"But only a specialty restaurant would bother with such a thing."\
 
 ld c,":a;img\rika-nipa.jpg",10
-「でも、知恵先生のカレーに掛ける情熱は、専門のレストランにも引けを取ることはないのですよ。」\
+;「でも、知恵先生のカレーに掛ける情熱は、専門のレストランにも引けを取ることはないのですよ。」\
+"But Chie-sensei's passion for curry is second to no one, not even specialty restaurants."\
 
 cl a,10
 
 ld l,":a;img\k2-ehen.jpg",10
-「ふっふっふ。諸君も分かってくれたようだね。先生が帰宅をしなかったのは、カレー鍋に絶えず火をいれるため。」\
+;「ふっふっふ。諸君も分かってくれたようだね。先生が帰宅をしなかったのは、カレー鍋に絶えず火をいれるため。」\
+"Heh heh heh. You all get it now, right？　The reason she never went home was because she had to maintain the fire under the curry pot."\
 ld l,":a;img\k2-igi.jpg",10
-「カレーの煮込み具合が犯行日時を教えてくれるよ。」\
+;「カレーの煮込み具合が犯行日時を教えてくれるよ。」\
+"And how thoroughly stewed that curry is will tell us the date and time of the crime."\
 
 cl a,10
 
 ld c,":a;img\rika-warai.jpg",10
-「現場は保存されているのですよ。さっそく、カレー鍋を調べるのですよ。」\
+;「現場は保存されているのですよ。さっそく、カレー鍋を調べるのですよ。」\
+"The crime scene has been preserved. Let us hurry and examine the curry pot."\
 
 cl a,10
 
 ld c,":a;img\mion-yowari.jpg",10
-「その必要はないよ。」\
+;「その必要はないよ。」\
+"That won't be necessary."\
 
 ld c,":a;img\mion-yowari2.jpg",10
-「ジャガイモやニンジンは形がなくなるほど溶けてルーにコクと旨味を加え、お肉もとろけるような美味しさだったよ。まさに最高のカレーだったよ・・・。」\
+;「ジャガイモやニンジンは形がなくなるほど溶けてルーにコクと旨味を加え、お肉もとろけるような美味しさだったよ。まさに最高のカレーだったよ・・・。」\
+"The potatoes and carrots were so thoroughly melted they were losing their shape, adding body and flavor to the roux, and the meat was melt-in-your-mouth delicious. It was truly the ultimate curry..."\
 
 wait 2000
 stop
@@ -1673,28 +2029,36 @@ wait 2000
 bg "img\chourishitsu.jpg",10
 
 ld r,":a;img\mion-normal3.jpg",10
-「はむはむ・・・。うーん旨いねぇ。やっぱり日曜日はカレー曜日だよ。」\
+;「はむはむ・・・。うーん旨いねぇ。やっぱり日曜日はカレー曜日だよ。」\
+"Nom nom... Mmm, so delicious. Sunday truly is curry day."\
 
 ;ガラッ
 
 ld l,":a;img\tie-okori.jpg",10
-「誰ですか？そこでカレーを食べているのは」\
-「あれほど、月曜日まで寝かせておこうと言ったのに！！」\
+;「誰ですか？そこでカレーを食べているのは」\
+"Who's there？　Who dares eat that curry？"\
+;「あれほど、月曜日まで寝かせておこうと言ったのに！！」\
+"Even though I made it abundantly clear it needs to wait until Monday!!"\
 
 ld r,":a;img\mion-odoroki3.jpg",10
-「ち・・・知恵先生！なんでここに？」\
+;「ち・・・知恵先生！なんでここに？」\
+"Ch-Chie-sensei？! What are you doing here？"\
 
 ld l,":a;img\tie-gekido.jpg",10
-「私だって食べたいのを我慢して、我慢して、昨日から寝ずの番で火を入れて・・・それを・・・それを・・・。今まさに花開こうというツボミをむしってしまうなんて・・・。ちゃんと償ってもらいますよ。」\
+;「私だって食べたいのを我慢して、我慢して、昨日から寝ずの番で火を入れて・・・それを・・・それを・・・。今まさに花開こうというツボミをむしってしまうなんて・・・。ちゃんと償ってもらいますよ。」\
+"I, myself, have been fighting it, resisting the urge to eat that curry, tending to the fire without sleep... And then... And then... I can't believe you plucked that beautiful flower right before it could bloom. You'll pay dearly for this."\
 
 ld r,":a;img\mion-tohoho3.jpg",10
-（こ・・・殺される！！）\
+;（こ・・・殺される！！）\
+（Sh... she's going to kill me!!）\
 
 ld r,":a;img\mion-odoroki3.jpg",10
-「えいっ、これでも喰らえ！！」\
+;「えいっ、これでも喰らえ！！」\
+"Fine, then take this!!"\
 
 ld l,":a;img\tie-komari.jpg",10
-「きゃあぁぁぁぁ・・・」\
+;「きゃあぁぁぁぁ・・・」\
+"Aaaaaahh..."\
 wait 1000
 bg "img\black.bmp",10
 wait 1500
@@ -1710,7 +2074,8 @@ bg "img\01.jpg",10
 
 
 ld c,":a;img\mion-yowari.jpg",10
-「・・・って訳さ。」\
+;「・・・って訳さ。」\
+"...And that's how it happened."\
 
 wait 1500
 
@@ -1729,18 +2094,33 @@ wait 500
 bg "img\01.jpg",10
 
 ld c,":a;img\rika-normal.jpg",10
-「では、判決なのですよ。この裁判は圭一の裁判なので、魅ぃには追って沙汰するのですよ。」\
-「【被告人・前原圭一】は、・・・」\
+;「では、判決なのですよ。この裁判は圭一の裁判なので、魅ぃには追って沙汰するのですよ。」\
+"Then, we've reached a verdict. This trial is for Keiichi, so Mii's disposition will be handled at a later date."\
+;「【被告人・前原圭一】は、・・・」\
+"I declare the defendant, Keiichi Maebara..."\
 
 ;■判決
 
 ld c,":a;img\rika-nipa.jpg",10
 
-ld l,":a;img\yuu.jpg",10
-wait 600
+;ld l,":a;img\yuu.jpg",10
+;wait 600
 
-ld r,":a;img\yuuzai.jpg",10
-wait 600
+;ld r,":a;img\yuuzai.jpg",10
+;wait 600
+
+ld r,":a;img\yuuzai1.png",10
+wait 200
+ld r,":a;img\yuuzai2.png",10
+wait 200
+ld r,":a;img\yuuzai3.png",10
+wait 200
+ld r,":a;img\yuuzai4.png",10
+wait 200
+ld r,":a;img\yuuzai5.png",10
+wait 200
+ld r,":a;img\yuuzai6.png",10
+wait 200
 
 cl l,10
 cl r,10
@@ -1748,23 +2128,28 @@ cl r,10
 stop
 
 ld c,":a;img\rika-warai.jpg",10
-「圭一を@“コンビニの会計で『ありがとうございました』と言われたら、@必ず『どういたしまして』と返事しなくてはいけない』の刑”に処すのですよ。」\
+;「圭一を@“コンビニの会計で『ありがとうございました』と言われたら、@必ず『どういたしまして』と返事しなくてはいけない』の刑”に処すのですよ。」\
+"Keiichi, @your punishment will be, @when you're paying the bill at the grocery store and the clerk says 'thank you,' you must respond 'you're welcome' every single time."\
 
 bgm "sound\engeki.mp3"
 
 ld l,":a;img\k2-komari.jpg",10
-「ええっ、な、なんでだよ！濡れ衣だったのに。そんな微妙に恥ずかしい・・・」\
+;「ええっ、な、なんでだよ！濡れ衣だったのに。そんな微妙に恥ずかしい・・・」\
+"Huh？　Wh-what？! But I was falsely charged. Plus, it's kinda embarrassing to say stuff like that..."\
 
 ld c,":a;img\rika-nipa.jpg",10
-「圭一は変態なのですよ。」\
+;「圭一は変態なのですよ。」\
+"Keiichi, you are guilty of being a pervert."\
 
 ld r,":a;img\satoko-normal.jpg",10
-「変態ではしかたありませんですわね。」\
+;「変態ではしかたありませんですわね。」\
+"He can not help being a pervert."\
 
 bg "img\mado.jpg",10
 
 ld c,":a;img\rena-hau.jpg",10
-「はぅ。礼儀正しい圭一くん、かあいいと思うんだよ。・・・だよ。」\
+;「はぅ。礼儀正しい圭一くん、かあいいと思うんだよ。・・・だよ。」\
+"Hau, I think it would be so kyute to see Keiichi-kun being extra polite. ...Polite."\
 ld c,":a;img\rena-hau2.jpg",10
 
 wait 2000
@@ -1836,7 +2221,8 @@ br
 br
 br
 br
-　　　　　　　　スタッフルーム\
+;　　　　　　　　スタッフルーム\
+　　　　　　　　Staff　Room\
 
 wait 1000
 
@@ -1844,34 +2230,57 @@ bgm "sound\bgml016.mp3"
 setwindow 8,16,23,16,26,26,0,2,20,1,1,#aaaaaa,0,0,639,479
 bg "img\staff.jpg",10
 
-このたびは、店じまいセールの２００６年冬コミ新作『逆転ひぐらし裁判～カレーなる逆転』をお買い上げありがとうございます。\
+;このたびは、店じまいセールの２００６年冬コミ新作『逆転ひぐらし裁判～カレーなる逆転』をお買い上げありがとうございます。\
+　I'd like to take this opportunity to thank you for purchasing the new Winter Comiket release from Misejimai-Sale, 'Ace Higurashi Attorney - The Curry Turnabout.'\
 
-０７ｔｈ　Ｅｘｐａｎｓｉｏｎ様のオリジナルのひぐらしという作品は、主に昭和５６年から昭和５８年ごろが舞台となっております。\
-この作品にもその時代の要素を若干取り入れてみました。\
-１つは『料理天国』。料理バラエティー番組のハシリですね。
-試食係の龍虎さんは元関取です。\
-『セーラー服と機関銃』。
-最近、長澤まさみ主演でリバイバルされましたね。
-昭和５６年末に公開された薬師丸ひろ子主演の角川映画です。\
-５８年には『時を駆ける少女』（主演：原田知世）なんて作品もありましたね。
-この作品も最近アニメ映画でリバイバルされました。
-そういえば、梨花ちゃんはある意味『時を駆ける少女』でもありますね。\
-昭和５６年から昭和５８年は遠いようでも、近年のリバイバルブームの中で、熱い時代としてクローズアップされているのかもしれません。\
+;０７ｔｈ　Ｅｘｐａｎｓｉｏｎ様のオリジナルのひぐらしという作品は、主に昭和５６年から昭和５８年ごろが舞台となっております。\
+　07th Expansion's original work, Higurashi, is primarily set around 1981 to 1983.\
+;この作品にもその時代の要素を若干取り入れてみました。\
+　So, I tried to incorporate some elements from that era into this work.\
+;１つは『料理天国』。料理バラエティー番組のハシリですね。
+　First is 'Ryori Tengoku: Cooking Paradise'. It's an actual cooking variety show.
+;試食係の龍虎さんは元関取です。\
+　The taste tester on the show, Ryuuko-san, is a former sumo wrestler.\
+;『セーラー服と機関銃』。
+　Also, 'Sailor Suit and Machine Gun.'
+;最近、長澤まさみ主演でリバイバルされましたね。
+　It had a revival recently, starring Masami Nagasawa.
+;昭和５６年末に公開された薬師丸ひろ子主演の角川映画です。\
+　The Kadokawa movie starring Hiroko Yakushimaru released at the end of 1981.\
+;５８年には『時を駆ける少女』（主演：原田知世）なんて作品もありましたね。
+　There was also a movie from 1983 called 'The Girl Who Leapt Through Time'. （starring Tomoyo Harada）
+;この作品も最近アニメ映画でリバイバルされました。
+　That work, too, was recently revived as an animated film.
+;そういえば、梨花ちゃんはある意味『時を駆ける少女』でもありますね。\
+　Come to think of it, Rika-chan could be described as a 'Girl Who Leapt Through Time' in a sense.\
+;昭和５６年から昭和５８年は遠いようでも、近年のリバイバルブームの中で、熱い時代としてクローズアップされているのかもしれません。\
+　Though the years of 1981-1983 may seem distant, thanks to the recent revival boom, maybe you could say it's a hot era to be highlighted.\
 
-さて、今回初めての冬コミ当選ということで、
-「これじゃあ、メリークリスマスじゃなくて、メリークルシミマスだよー！」
-と、ベタなことを言いたくなるほどの地獄の進行を味わっております。\
-食事の準備に掛ける時間もあまりないので、レトルトカレーばかり食べております。\
-そのせいもあってか、こんなゲームに仕上がりました。
-皆さん、楽しんでいただけたでしょうか？\
+;さて、今回初めての冬コミ当選ということで、
+　Now then, this is our first time releasing something for Winter Comkiet, so...
+;「これじゃあ、メリークリスマスじゃなくて、メリークルシミマスだよー！」
+"Instead of Merry Christmas, this is Weary Christmas!"
+;と、ベタなことを言いたくなるほどの地獄の進行を味わっております。\
+　The hellish development process made me want to say something corny like that.\
+;食事の準備に掛ける時間もあまりないので、レトルトカレーばかり食べております。\
+　I haven't had much time to prepare meals, so I've been eating nothing but pre-packaged curry.\
+;そのせいもあってか、こんなゲームに仕上がりました。
+　Maybe that's one of the reasons I decided to make this game.
+;皆さん、楽しんでいただけたでしょうか？\
+　So, did you all enjoy the story？\
 
-店じまいセールが本当に店じまいしないよう、これからもご贔屓にお願いいたしやすです。ぺこり。\
+;店じまいセールが本当に店じまいしないよう、これからもご贔屓にお願いいたしやすです。ぺこり。\
+　Misejimai-Sale means 'store closing sale.' I hope you'll continue patronizing us so our store doesn't actually close down. *bow*\
 
-ご意見・ご感想お待ちしています
-ＵＲＬ：ｈｔｔｐ：／／ｗｗｗ３．ａｌｐｈａ－ｎｅｔ．ｎｅ．ｊｐ／ｕｓｅｒｓ／ａｂｂｅｙ／ｍｉｓｅｊｉｍａｉ／
-メール：ｄｏｔｓｕｔｏｔｓｕｋｏｔｓｕ＿ｄａｉｏｕ＠ｙａｈｏｏ．ｃｏ．ｊｐ\
+;ご意見・ご感想お待ちしています
+　I'd love to hear your feedback and impressions:
+;ＵＲＬ：ｈｔｔｐ：／／ｗｗｗ３．ａｌｐｈａ－ｎｅｔ．ｎｅ．ｊｐ／ｕｓｅｒｓ／ａｂｂｅｙ／ｍｉｓｅｊｉｍａｉ／
+　URL: http://www3.alpha-net.ne.jp/users/abbey/misejimai/
+;メール：ｄｏｔｓｕｔｏｔｓｕｋｏｔｓｕ＿ｄａｉｏｕ＠ｙａｈｏｏ．ｃｏ．ｊｐ\
+　Email: dotsutotsukotsu_daiou＠yahoo.co.jp\
 
-では、また会えることを願ってます。ではでは～♪
+;では、また会えることを願ってます。ではでは～♪
+　Anyhow, I hope we can meet again. See ya~～♪
 
 wait 3000
 
@@ -1891,20 +2300,20 @@ end
 skipoff
 btndef clear
 if %9==1 goto *title_select
-cselbtn 0,50,280,45
-cselbtn 1,51,380,45
-cselbtn 2,52,280,100
-cselbtn 3,53,380,100
-cselbtn 4,54,280,155
-cselbtn 5,55,380,155
-if %5==1 cselbtn 6,56,280,210
-if %5==1 cselbtn 7,57,380,210
+cselbtn 0,50,10,145
+cselbtn 1,51,310,145
+cselbtn 2,52,10,200
+cselbtn 3,53,310,200
+cselbtn 4,54,10,255
+cselbtn 5,55,310,255
+if %5==1 cselbtn 6,56,10,90
+if %5==1 cselbtn 7,57,310,90
 *csel_loop
 selectbtnwait %0
 if %0=-2 systemcall lookback:goto *csel_loop
-if %0=-1 gosub *rclk:goto *csel_st
-if %5==0 & %0>=50 & %0<=55 saveon:sub %0,50:cselgoto %0
-if %5==1 & %0>=50 & %0<=57 saveon:sub %0,50:cselgoto %0
+;if %0=-1 gosub *rclk:goto *csel_st
+if %5==0 & %0>=50 & %0<=55 saveon:sub %0,50:btndef clear:cselgoto %0
+if %5==1 & %0>=50 & %0<=57 saveon:sub %0,50:btndef clear:cselgoto %0
 goto *csel_loop
 *title_select
 cselbtn 0,50,250,390
@@ -1912,5 +2321,5 @@ cselbtn 0,50,250,390
 selectbtnwait %0
 if %0=-2 systemcall lookback:goto *csel_loop2
 ;if %0=-1 gosub *rclk:goto *csel_st
-if %0==50 saveon:sub %0,50:cselgoto %0
+if %0==50 saveon:sub %0,50:btndef clear:cselgoto %0
 goto *csel_loop2
