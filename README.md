@@ -8,6 +8,9 @@ A curry related crime has been committed, and Keiichi must fight to prove his in
 
 This game does not contain any spoilers for either work, so feel free to play even if you're only familiar with Higu or AA (or neither!).
 
+# Installation
+Just download the zip file from the [Releases page](https://github.com/07th-mod/ace-higurashi-attorney/releases/latest), extract the content, and run the exe. It's that simple.
+
 # Controls
 - Right click - Open the save/load screen
 - F - Toggle fullscreen
@@ -15,4 +18,4 @@ This game does not contain any spoilers for either work, so feel free to play ev
 - Ctrl - Hold to skip
 
 # Walkthrough
-Planning to write one soon...
+If you get stuck while playing, you can check the [walkthrough](https://github.com/07th-mod/ace-higurashi-attorney/raw/main/AceHigurashiAttorneyWalkthrough.txt).
