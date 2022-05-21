@@ -1,0 +1,27 @@
+Ace Higurashi Attorney - The Curry Turnabout
+
+It's impossible to lose in this game, so a walkthrough isn't really necessary.
+But here are the steps to reach the end, in a relatively spoiler-free guide.
+-------------------------------------------------------------------------------
+
+(Optional) Click "Check Evidence" and look at the options
+Click "Continue" once you're done
+
+Select "Present 'Autopsy Rpt.'"
+
+Press on "came to school early"
+Select "reason for coming early"
+
+Press on "already dead"
+Select "press further"
+
+Press on "Searched the school"
+
+Select "1. Yes" ("2. No" would also work here)
+
+Select "2." (All other options will loop you back to this question)
+
+Select "2." (Picking 1 here also works, and actually skips the next question)
+Select "B:"
+
+Select "Present 'Curry'"
