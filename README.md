@@ -6,8 +6,6 @@
 
 A curry related crime has been committed, and Keiichi must fight to prove his innocence. This short game features the cast of Higurashi conducting a trial with gameplay straight out of Ace Attorney.
 
-This game does not contain any spoilers for either work, so feel free to play even if you're only familiar with Higu or AA (or neither!).
-
 # Installation
 Just download the zip file from the [Releases page](https://github.com/07th-mod/ace-higurashi-attorney/releases/latest), extract the content, and run the exe. It's that simple.
 
